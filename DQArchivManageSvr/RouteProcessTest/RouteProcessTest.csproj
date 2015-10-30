@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71C3E3F3-0F83-45FA-92BC-157AD6BEEACB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RouteProcessTest</RootNamespace>
+    <AssemblyName>RouteProcessTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DQ.Common.RouteProcess">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\TiPLM\PLMClient\DQ.Common.RouteProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PLMCommon">
+      <HintPath>F:\PLM\PLMUT\PLMCommon\bin\Debug\PLMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thyt.TiPLM.BRL.Common">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.BRL.Common.DLL</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.BRL.Environment">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.BRL.Environment.DLL</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.BRL.Product">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.BRL.Product.DLL</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.Common">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.Common.Helper">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.Common.Helper.DLL</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.DAL.Environment">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.DAL.Environment.DLL</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.DAL.Product">
+      <HintPath>..\..\..\..\..\Desktop\PLM\PLMServer\Thyt.TiPLM.DAL.Product.DLL</HintPath>
+    </Reference>
+    <Reference Include="Thyt.TiPLM.DEL.Product">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\TiPLM\PLMClient\Thyt.TiPLM.DEL.Product.DLL</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DARouteProcess.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

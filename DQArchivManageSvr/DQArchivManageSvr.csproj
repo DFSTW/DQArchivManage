@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D933C218-6D38-4F6C-977B-D6BC90EBB07F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DQArchivManageSvr</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Thyt.TiPLM.Common" />
+    <Reference Include="Thyt.TiPLM.Common.Interface" />
+    <Reference Include="System.Data" />
+    <Reference Include="Thyt.TiPLM.DEL.Product" />
+    <Reference Include="Thyt.TiPLM.DAL.Environment" />
+    <Reference Include="Oracle.DataAccess" />
+    <Reference Include="Thyt.TiPLM.DAL.Product" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thyt.TiPLM.BRL.Admin.NewResponsibility" />
+    <Reference Include="Thyt.TiPLM.DEL.Admin.NewResponsibility" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DQArchivManageSvr\BrArchivManager.cs" />
+    <Compile Include="DQArchivManageSvr\DaArchivManager.cs" />
+    <Compile Include="DQArchivManageSvr\SvrEntrance.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DQArchivManageCommon\DQArchivManageCommon.csproj">
+      <Project>{2749b4fc-69af-456a-9e89-600ddcbd3c33}</Project>
+      <Name>DQArchivManageCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

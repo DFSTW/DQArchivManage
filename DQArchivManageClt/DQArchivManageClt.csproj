@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FDBB103-88A8-4F23-8AF9-8A5FAB4A8A87}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DQArchivManageClt</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Thyt.TiPLM.Common.Interface" />
+    <Reference Include="Infragistics.Win.UltraWinEditors.v3" />
+    <Reference Include="Thyt.TiPLM.DEL.Product" />
+    <Reference Include="System" />
+    <Reference Include="Thyt.TiPLM.UIL.Product.Common" />
+    <Reference Include="Thyt.TiPLM.UIL.Common" />
+    <Reference Include="System.Data" />
+    <Reference Include="Infragistics.Win.v3" />
+    <Reference Include="Thyt.TiPLM.DEL.Admin.BPM" />
+    <Reference Include="Thyt.TiPLM.PLL.Product2" />
+    <Reference Include="Thyt.TiPLM.DEL.Admin.NewResponsibility" />
+    <Reference Include="Thyt.TiPLM.Common" />
+    <Reference Include="Thyt.TiPLM.PLL.Admin.DataModel" />
+    <Reference Include="Thyt.TiPLM.DEL.Admin.DataModel" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Thyt.TiPLM.PLL.Admin.NewResponsibility" />
+    <Reference Include="Infragistics.Shared.v3" />
+    <Reference Include="Thyt.TiPLM.PLL.FileService" />
+    <Reference Include="Thyt.TiPLM.PLL.Common" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thyt.TiPLM.PLL.Admin.BPM" />
+    <Reference Include="Thyt.TiPLM.CLT.Admin.BPM" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DQArchivManageClt\UcTsdItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UcResWk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\FrmBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\DelegatesOfAm.cs" />
+    <Compile Include="DQArchivManageClt\UiEntrance.cs" />
+    <Compile Include="DQArchivManageClt\FrmInputRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\ResWkInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UcSent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UcPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\FrmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UcTs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UcPrintItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\OutPutExcel.cs" />
+    <Compile Include="DQArchivManageClt\SelectResHandler2.cs" />
+    <Compile Include="DQArchivManageClt\FrmArchivManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\FrmTsdQuickSch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UcSentItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\TsdOutPut.cs" />
+    <Compile Include="DQArchivManageClt\PlArchivManage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DQArchivManageCommon\DQArchivManageCommon.csproj">
+      <Project>{2749b4fc-69af-456a-9e89-600ddcbd3c33}</Project>
+      <Name>DQArchivManageCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>
