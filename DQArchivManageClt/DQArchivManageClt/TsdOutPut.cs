@@ -1,27 +1,28 @@
 ﻿namespace DQArchivManageClt
 {
-    using Microsoft.Office.Interop.Excel;
+    using NPOI.SS.UserModel;
+    using NPOI.SS.Util;
     using System;
-    using System.Collections;
     using System.ComponentModel;
     using System.Data;
     using System.Diagnostics;
     using System.IO;
     using System.Reflection;
     using System.Runtime.InteropServices;
+    using System.Text;
     using System.Windows.Forms;
-    using System.Xml;
-    using Thyt.TiPLM.DEL.Admin.DataModel;
     using Thyt.TiPLM.DEL.Product;
-    using Thyt.TiPLM.PLL.Admin.DataModel;
     using Thyt.TiPLM.PLL.Admin.NewResponsibility;
 
-    public class TsdOutPut
+    internal class TsdOutPut
     {
         private string _id;
         private DEBusinessItem _item;
         private string _name;
+        private string _SM;
+        private string _TSTYPE;
         private string _wk;
+        private string _YCT;
         private readonly BackgroundWorker bkwMain = new BackgroundWorker();
         private FrmBar frmBar = null;
         private string[] sttrs = new string[] { "签章类型" };
@@ -45,153 +46,113 @@
             }
             else
             {
-                string str2 = str + @"\plmtuoshaidan.xls";
-                ApplicationClass class2 = new ApplicationClass();
-                Workbooks workbooks = class2.Workbooks;
-                object obj2 = Missing.Value;
-                IntPtr hwnd = new IntPtr(class2.Hwnd);
-                int iD = 0;
-                GetWindowThreadProcessId(hwnd, out iD);
-                Process processById = Process.GetProcessById(iD);
-                try
+                IWorkbook workbook;
+                FileStream stream;
+                int num5;
+                string path = str + @"\plmtuoshaidan.xls";
+                int num3 = drawingForTsOutPut.Tables[0].Rows.Count;
+                int num4 = drawingForTsOutPut.Tables[0].Columns.Count;
+                using (stream = File.OpenRead(path))
                 {
-                    Workbook workbook = workbooks.Open(str2, Type.Missing, false, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-                    Worksheet worksheet = (Worksheet) workbook.Worksheets.get_Item(1);
-                    int num4 = drawingForTsOutPut.Tables[0].Rows.Count;
-                    int num5 = drawingForTsOutPut.Tables[0].Columns.Count;
-                    Range range = null;
-                    Range range2 = null;
-                    Range range3 = null;
-                    Range range4 = null;
-                    Range range5 = null;
-                    Range range6 = null;
-                    Range range7 = null;
-                    Range range8 = null;
-                    Range range9 = null;
-                    Range range10 = null;
-                    range = worksheet.get_Range("D2", obj2);
-                    if (range.Text.ToString().Replace("$", "") == "liuchengmingcheng")
+                    workbook = WorkbookFactory.Create(stream);
+                    stream.Close();
+                }
+                ISheet sheetAt = workbook.GetSheetAt(0);
+                for (num5 = 0; num5 < sheetAt.NumMergedRegions; num5++)
+                {
+                    CellRangeAddress mergedRegion = sheetAt.GetMergedRegion(num5);
+                    switch (sheetAt.GetRow(mergedRegion.FirstRow).GetCell(mergedRegion.FirstColumn).ToString())
                     {
-                        range.Value2=this._wk;
+                        case "$liuchengmingcheng":
+                            sheetAt.GetRow(mergedRegion.FirstRow).GetCell(mergedRegion.FirstColumn).SetCellValue(this._wk);
+                            break;
+
+                        case "$name":
+                            sheetAt.GetRow(mergedRegion.FirstRow).GetCell(mergedRegion.FirstColumn).SetCellValue(this._name);
+                            break;
+
+                        case "$tsfs":
+                            sheetAt.GetRow(mergedRegion.FirstRow).GetCell(mergedRegion.FirstColumn).SetCellValue(this._TSTYPE);
+                            break;
+
+                        case "$ttfs":
+                            sheetAt.GetRow(mergedRegion.FirstRow).GetCell(mergedRegion.FirstColumn).SetCellValue(this._YCT);
+                            break;
+
+                        case "$sm":
+                            sheetAt.GetRow(mergedRegion.FirstRow).GetCell(mergedRegion.FirstColumn).SetCellValue(this._SM);
+                            break;
                     }
-                    range10 = worksheet.get_Range("D3", obj2);
-                    if (range10.Text.ToString().Replace("$", "") == "name")
+                }
+                for (num5 = 0; num5 < 5; num5++)
+                {
+                    for (int i = 0; i < 6; i++)
                     {
-                        range10.Value2 = this._name;
-                    }
-                    int num6 = 5;
-                    int num7 = 0;
-                    int num8 = 0;
-                    for (int i = 0; i < num4; i++)
-                    {
-                        int num10 = drawingForTsOutPut.Tables[0].Rows.Count;
-                        int num11 = num4 - i;
-                        num6++;
-                        try
+                        switch (sheetAt.GetRow(num5).GetCell(i).ToString())
                         {
-                            range2 = worksheet.get_Range("A" + num6, obj2);
-                            range2.Value2=i + 1;
-                            range2.Cells.Borders[XlBordersIndex.xlEdgeTop].LineStyle = 1;
-                            range2.Cells.Borders[XlBordersIndex.xlEdgeLeft].LineStyle = 1;
-                            if ((num4 - i) == 1)
-                            {
-                                range2.Cells.Borders[XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-                            }
-                            range3 = worksheet.get_Range("B" + num6, obj2);
-                            range3.Value2=drawingForTsOutPut.Tables[0].Rows[i][0].ToString();
-                            range3.Cells.Borders[XlBordersIndex.xlEdgeTop].LineStyle = 1;
-                            range3.Cells.Borders[XlBordersIndex.xlEdgeLeft].LineStyle = 1;
-                            if ((num4 - i) == 1)
-                            {
-                                range3.Cells.Borders[XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-                            }
-                            range4 = worksheet.get_Range("C" + num6, obj2);
-                            range4.Value2=drawingForTsOutPut.Tables[0].Rows[i][2].ToString();
-                            range4.Cells.Borders[XlBordersIndex.xlEdgeTop].LineStyle = 1;
-                            range4.Cells.Borders[XlBordersIndex.xlEdgeLeft].LineStyle = 1;
-                            if ((num4 - i) == 1)
-                            {
-                                range4.Cells.Borders[XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-                            }
-                            range5 = worksheet.get_Range("D" + num6, obj2);
-                            range5.Value2=drawingForTsOutPut.Tables[0].Rows[i][3].ToString();
-                            range5.Cells.Borders[XlBordersIndex.xlEdgeTop].LineStyle = 1;
-                            range5.Cells.Borders[XlBordersIndex.xlEdgeLeft].LineStyle = 1;
-                            if ((num4 - i) == 1)
-                            {
-                                range5.Cells.Borders[XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-                            }
-                            num7 += Convert.ToInt32(drawingForTsOutPut.Tables[0].Rows[i][3].ToString());
-                            num8 = num7;
-                            range6 = worksheet.get_Range("E" + num6, obj2);
-                            range6.Value2=drawingForTsOutPut.Tables[0].Rows[i][4].ToString();
-                            range6.Cells.Borders[XlBordersIndex.xlEdgeTop].LineStyle = 1;
-                            range6.Cells.Borders[XlBordersIndex.xlEdgeLeft].LineStyle = 1;
-                            if ((num4 - i) == 1)
-                            {
-                                range6.Cells.Borders[XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-                            }
-                            range7 = worksheet.get_Range("F" + num6, obj2);
-                            range7.Value2=drawingForTsOutPut.Tables[0].Rows[i][5].ToString();
-                            range7.Cells.Borders[XlBordersIndex.xlEdgeTop].LineStyle = 1;
-                            range7.Cells.Borders[XlBordersIndex.xlEdgeLeft].LineStyle = 1;
-                            range7.Cells.Borders[XlBordersIndex.xlEdgeRight].LineStyle = 1;
-                            if ((num4 - i) == 1)
-                            {
-                                range7.Cells.Borders[XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-                            }
-                        }
-                        catch (Exception)
-                        {
+                            case "$tsfs":
+                                sheetAt.GetRow(num5).GetCell(i).SetCellValue(this._TSTYPE);
+                                break;
+
+                            case "$ttfs":
+                                sheetAt.GetRow(num5).GetCell(i).SetCellValue(this._YCT);
+                                break;
+
+                            case "$SM":
+                                sheetAt.GetRow(num5).GetCell(i).SetCellValue(this._SM);
+                                break;
                         }
                     }
-                    worksheet.get_Range("B" + (num6 + 2), obj2).Value2 = "合计" + num8 + " 张";
-                    range8 = worksheet.get_Range("C" + (num6 + 2), obj2);
-                    range8.Font.Size = "12";
-                    range8.Value2 = "计划签字";
-                    range9 = worksheet.get_Range("D" + (num6 + 2), obj2);
-                    range9.Font.Size = "12";
-                    range9.Font.Bold = true;
-                    range9.ShrinkToFit= true;
-                    range9.Value2 = PLUser.Agent.GetUserByOid(this._item.Creator).Name;
-                    string path = str + @"\托晒单输出设置.xlm";
-                    if (File.Exists(path))
-                    {
-                        ArrayList attributes = ModelContext.MetaModel.GetAttributes(this._item.ClassName);
-                        XmlDocument document = new XmlDocument();
-                        document.Load(path);
-                        foreach (XmlElement element in document.DocumentElement.ChildNodes)
-                        {
-                            string str4 = element.GetAttribute("AttrLabel");
-                            string str5 = element.GetAttribute("Address");
-                            foreach (DEMetaAttribute attribute in attributes)
-                            {
-                                if (str4 == attribute.Label)
-                                {
-                                    Range range11 = worksheet.get_Range(str5 + (num6 + 3), obj2);
-                                    range11.Font.Size = 12;
-                                    range11.Value2 = str4;
-                                    (range11.Cells[range11.Row, range11.Column + 1] as Range).Value2=(this._item.Iteration.GetAttrValue(attribute.Name) == null) ? "" : this._item.Iteration.GetAttrValue(attribute.Name).ToString();
-                                }
-                            }
-                        }
-                    }
-                    class2.DisplayAlerts = false;
-                    workbook.SaveAs(str + @"\plmtuoshaidan.1.xls", obj2, obj2, obj2, obj2, obj2, XlSaveAsAccessMode.xlExclusive, obj2, obj2, obj2, obj2, obj2);
                 }
-                catch (Exception exception)
+                int num7 = 5;
+                int num8 = 1;
+                int num9 = 0;
+                short num10 = 460;
+                ICellStyle style = workbook.CreateCellStyle();
+                style.BorderBottom = NPOI.SS.UserModel.BorderStyle.Medium;
+                style.BorderLeft = NPOI.SS.UserModel.BorderStyle.Medium;
+                style.BorderRight = NPOI.SS.UserModel.BorderStyle.Medium;
+                style.BorderTop = NPOI.SS.UserModel.BorderStyle.Medium;
+                style.VerticalAlignment = VerticalAlignment.Center;
+                style.WrapText = true;
+                foreach (DataRow row in drawingForTsOutPut.Tables[0].Rows)
                 {
-                    throw exception;
+                    IRow row2 = sheetAt.CreateRow(num7++);
+                    row2.Height = (short) (num10 * ((Encoding.Default.GetByteCount(row[5].ToString()) / 40) + 1));
+                    ICell cell = row2.CreateCell(0);
+                    cell.SetCellValue((double) num8++);
+                    cell.CellStyle = style;
+                    cell = row2.CreateCell(1);
+                    cell.SetCellValue(row[0].ToString());
+                    cell.CellStyle = style;
+                    cell = row2.CreateCell(2);
+                    cell.SetCellValue(row[2].ToString());
+                    cell.CellStyle = style;
+                    cell = row2.CreateCell(3);
+                    cell.SetCellValue(row[3].ToString());
+                    cell.CellStyle = style;
+                    cell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
+                    cell = row2.CreateCell(4);
+                    cell.SetCellValue(row[4].ToString());
+                    cell.CellStyle = style;
+                    cell.CellStyle.Alignment = NPOI.SS.UserModel.HorizontalAlignment.Center;
+                    cell = row2.CreateCell(5);
+                    cell.SetCellValue(row[5].ToString());
+                    cell.CellStyle = style;
+                    string str4 = row.Table.Columns[3].ToString();
+                    num9 += Convert.ToInt32(row[3].ToString());
                 }
-                finally
+                sheetAt.CreateRow(num7 + 2).CreateCell(1).SetCellValue("合计" + num9 + " 张");
+                sheetAt.GetRow(num7 + 2).CreateCell(3).SetCellValue("计划签字:");
+                sheetAt.GetRow(num7 + 2).CreateCell(4).SetCellValue(PLUser.Agent.GetUserByOid(this._item.Creator).Name);
+                sheetAt.GetRow(num7 + 2).CreateCell(5).SetCellValue(DateTime.Now.ToShortDateString());
+                using (stream = new FileStream("C:/a.xls", FileMode.Create))
                 {
-                    processById.Kill();
-                    object obj3 = Missing.Value;
-                    ApplicationClass application = new ApplicationClass();
-                    application.Application.Workbooks.Open(str + @"\plmtuoshaidan.1.xls", obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3, obj3);
-                    application.Visible = true;
-                    e.Result = "报表已生成...请保存...";
+                    workbook.Write(stream);
+                    stream.Close();
                 }
+                Process.Start("C:/a.xls");
+                e.Result = "报表已生成...请保存...";
             }
         }
 
@@ -234,6 +195,9 @@
             this.frmBar = new FrmBar(this.bkwMain);
             this.bkwMain.RunWorkerAsync(iroid);
             this.frmBar.ToAStart();
+            this._YCT = (item.Iteration.GetAttrValue("YCT") == null) ? "" : item.Iteration.GetAttrValue("YCT").ToString();
+            this._SM = (item.Iteration.GetAttrValue("SM") == null) ? "" : item.Iteration.GetAttrValue("SM").ToString();
+            this._TSTYPE = (item.Iteration.GetAttrValue("TSTYPE") == null) ? "" : item.Iteration.GetAttrValue("TSTYPE").ToString();
         }
     }
 }

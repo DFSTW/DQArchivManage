@@ -20,30 +20,35 @@ namespace DQArchvTEST
         static void Main(string[] args)
         {
             //TestSVR();
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //   Application.Run();
-
-
-            bool isLoged = Login();
-            if (!isLoged) return;
-            int num;
-            int num2;
-            int num3;
-            string str;
-            PlArchivManage.Agent.GetAmCando(ClientData.LogonUser.Oid, out num, out num2, out num3, out str);
-            PlArchivManage.SetCanSignUserName = str;
-           
-            FrmArchivManage.frmMian = new FrmArchivManage();
-            FrmArchivManage.frmMian.InitFrm(num, num2, num3);
-            FrmArchivManage.frmMian.MdiParent = ClientData.mainForm;
-            FrmArchivManage.frmMian.Show();
-            //FrmArchivManage frm = new FrmArchivManage();
-            //if (ClientData.mainForm != null)
-            //    frm.MdiParent = ClientData.mainForm;
-            Application.Run(FrmArchivManage.frmMian);
+            TestClt();
 
         }
+
+         private static void TestClt()
+         {
+             Application.EnableVisualStyles();
+             Application.SetCompatibleTextRenderingDefault(false);
+             //   Application.Run();
+
+
+             bool isLoged = Login();
+             if (!isLoged) return;
+             int num;
+             int num2;
+             int num3;
+             string str;
+             PlArchivManage.Agent.GetAmCando(ClientData.LogonUser.Oid, out num, out num2, out num3, out str);
+             PlArchivManage.SetCanSignUserName = str;
+
+             FrmArchivManage.frmMian = new FrmArchivManage();
+             FrmArchivManage.frmMian.InitFrm(num, num2, num3);
+             FrmArchivManage.frmMian.MdiParent = ClientData.mainForm;
+             FrmArchivManage.frmMian.Show();
+             //FrmArchivManage frm = new FrmArchivManage();
+             //if (ClientData.mainForm != null)
+             //    frm.MdiParent = ClientData.mainForm;
+             Application.Run(FrmArchivManage.frmMian);
+         }
         /// <summary>
         /// 初始PLM公共数据
         /// </summary>
