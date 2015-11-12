@@ -1183,7 +1183,7 @@
             {
                 object attrValue = this._theItem.Iteration.GetAttrValue("YCT");
                 string ftly = "";
-                if ((attrValue == null) || (attrValue.ToString() != "一次图"))
+                //if ((attrValue == null) || (attrValue.ToString() != "一次图"))
                 {
                     attrValue = this._theItem.Iteration.GetAttrValue("FTLX");
                     if (attrValue != null)

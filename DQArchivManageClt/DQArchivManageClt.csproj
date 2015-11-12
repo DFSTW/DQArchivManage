@@ -125,7 +125,8 @@
       <Name>DQArchivManageCommon</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
 </Project>
