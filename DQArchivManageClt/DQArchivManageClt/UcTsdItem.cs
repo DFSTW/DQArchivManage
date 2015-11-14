@@ -1141,7 +1141,8 @@
             }
             else if (this._theItem.State == ItemState.CheckIn)
             {
-                if (PLGrantPerm.CanDoClassOperation(ClientData.LogonUser.Oid, "DQDOSSIERPRINT", Guid.Empty, "ClaRel_EDIT") == 1)
+                StringBuilder c;
+                if (PlArchivManage.CheckItemCanPrintOrSent(true, this._theItem, out c) && PLGrantPerm.CanDoClassOperation(ClientData.LogonUser.Oid, "DQDOSSIERPRINT", Guid.Empty, "ClaRel_EDIT") == 1)
                 {
                     this.btnApp.Text = "编  辑";
                     this._bEdit = false;

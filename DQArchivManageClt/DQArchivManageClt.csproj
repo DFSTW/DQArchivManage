@@ -127,6 +127,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="DQArchivManageClt\UcPrint.resx">
+      <DependentUpon>UcPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQArchivManageClt\UcTs.resx">
+      <DependentUpon>UcTs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
 </Project>

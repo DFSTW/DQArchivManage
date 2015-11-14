@@ -51,6 +51,7 @@
         private ResWkInfo resWkTsd;
         private TabControl tbCtrlTS;
         private TabPage tPTsdLst;
+        private ToolStripMenuItem ToolStripMenuItemTSDOutput;
         private TextBox txtTsID;
 
         public UcTs()
@@ -70,15 +71,15 @@
                     DEBusinessItem dest = null;
                     if (item.Tag is DEBusinessItem)
                     {
-                        dest = (DEBusinessItem) item.Tag;
+                        dest = (DEBusinessItem)item.Tag;
                     }
                     else if (item.Tag is DERelationBizItem)
                     {
-                        dest = ((DERelationBizItem) item.Tag).BizItem;
+                        dest = ((DERelationBizItem)item.Tag).BizItem;
                     }
                     if (dest != null)
                     {
-                        if (PSStart.EqualMaster((IBizItem[]) list.ToArray(typeof(IBizItem)), dest) != null)
+                        if (PSStart.EqualMaster((IBizItem[])list.ToArray(typeof(IBizItem)), dest) != null)
                         {
                             this.lvwTSD.Items.RemoveAt(i);
                             i--;
@@ -407,20 +408,20 @@
 
         protected override void Dispose(bool disposing)
         {
-            BizItemHandlerEvent.Instance.D_AfterReleased = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterReleased, this.d_AfterReleased);
-            BizItemHandlerEvent.Instance.D_AfterRevisionCreated = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterRevisionCreated, this.d_AfterRevisionCreated);
-            BizItemHandlerEvent.Instance.D_AfterUndoNewRevision = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoNewRevision, this.d_AfterUndoNewRevision);
-            BizItemHandlerEvent.Instance.D_AfterCheckIn = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterCheckIn, this.d_AfterCheckIn);
-            BizItemHandlerEvent.Instance.D_AfterCheckOut = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterCheckOut, this.d_AfterCheckOut);
-            BizItemHandlerEvent.Instance.D_AfterUndoCheckOut = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoCheckOut, this.d_AfterUndoCheckOut);
-            BizItemHandlerEvent.Instance.D_AfterIterationUpdated = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterIterationUpdated, this.d_AfterIterationUpdated);
-            BizItemHandlerEvent.Instance.D_AfterMasterUpdated = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterMasterUpdated, this.d_AfterMasterUpdated);
-            BizItemHandlerEvent.Instance.D_AfterDeleted = (PLMDelegate2) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterDeleted, this.d_AfterDeleted);
-            BizItemHandlerEvent.Instance.D_AfterUndoCheckOut = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoCheckOut, this.d_AfterUndoCheckOut);
-            BizItemHandlerEvent.Instance.D_AfterUndoAbandon = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoAbandon, this.d_AfterUndoAbandon);
-            BizItemHandlerEvent.Instance.D_AfterAbandon = (PLMBizItemDelegate) Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterAbandon, this.d_AfterAbandon);
-            DelegatesOfAm.Instance.D_AfterTsdTabClose = (PLMSimpleDelegate) Delegate.Remove(DelegatesOfAm.Instance.D_AfterTsdTabClose, this.Lvw_AfterTabClose);
-            DelegatesOfAm.Instance.D_AfterTsdCreate = (PLMSimpleDelegate) Delegate.Remove(DelegatesOfAm.Instance.D_AfterTsdCreate, this.Lvw_AfterTsdCreate);
+            BizItemHandlerEvent.Instance.D_AfterReleased = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterReleased, this.d_AfterReleased);
+            BizItemHandlerEvent.Instance.D_AfterRevisionCreated = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterRevisionCreated, this.d_AfterRevisionCreated);
+            BizItemHandlerEvent.Instance.D_AfterUndoNewRevision = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoNewRevision, this.d_AfterUndoNewRevision);
+            BizItemHandlerEvent.Instance.D_AfterCheckIn = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterCheckIn, this.d_AfterCheckIn);
+            BizItemHandlerEvent.Instance.D_AfterCheckOut = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterCheckOut, this.d_AfterCheckOut);
+            BizItemHandlerEvent.Instance.D_AfterUndoCheckOut = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoCheckOut, this.d_AfterUndoCheckOut);
+            BizItemHandlerEvent.Instance.D_AfterIterationUpdated = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterIterationUpdated, this.d_AfterIterationUpdated);
+            BizItemHandlerEvent.Instance.D_AfterMasterUpdated = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterMasterUpdated, this.d_AfterMasterUpdated);
+            BizItemHandlerEvent.Instance.D_AfterDeleted = (PLMDelegate2)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterDeleted, this.d_AfterDeleted);
+            BizItemHandlerEvent.Instance.D_AfterUndoCheckOut = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoCheckOut, this.d_AfterUndoCheckOut);
+            BizItemHandlerEvent.Instance.D_AfterUndoAbandon = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterUndoAbandon, this.d_AfterUndoAbandon);
+            BizItemHandlerEvent.Instance.D_AfterAbandon = (PLMBizItemDelegate)Delegate.Remove(BizItemHandlerEvent.Instance.D_AfterAbandon, this.d_AfterAbandon);
+            DelegatesOfAm.Instance.D_AfterTsdTabClose = (PLMSimpleDelegate)Delegate.Remove(DelegatesOfAm.Instance.D_AfterTsdTabClose, this.Lvw_AfterTabClose);
+            DelegatesOfAm.Instance.D_AfterTsdCreate = (PLMSimpleDelegate)Delegate.Remove(DelegatesOfAm.Instance.D_AfterTsdCreate, this.Lvw_AfterTsdCreate);
             if (disposing && (this.components != null))
             {
                 this.components.Dispose();
@@ -454,62 +455,75 @@
 
         private void InitializeComponent()
         {
-            this.components = new Container();
-            this.tbCtrlTS = new TabControl();
-            this.tPTsdLst = new TabPage();
-            this.lvwTSD = new SortableListView();
-            this.pnlTsSch = new Panel();
-            this.label1 = new Label();
-            this.btnTsSchDocId = new Button();
-            this.btnTsClear = new Button();
-            this.btnTsQiuckSch = new Button();
-            this.lbTsId = new Label();
-            this.txtTsID = new TextBox();
-            this.cMenuTSD = new ContextMenuStrip(this.components);
-            this.D_OPEN_TSD = new ToolStripMenuItem();
-            this.D_DEL_TSD = new ToolStripMenuItem();
-            this.D_ADD_TSD = new ToolStripMenuItem();
-            this.D_TOPRINT_TSD = new ToolStripMenuItem();
-            this.D_TOSENT_TSD = new ToolStripMenuItem();
-            this.panel1 = new Panel();
-            this.btnUpdateBpm = new Button();
+            this.components = new System.ComponentModel.Container();
+            this.tbCtrlTS = new System.Windows.Forms.TabControl();
+            this.tPTsdLst = new System.Windows.Forms.TabPage();
+            this.lvwTSD = new Thyt.TiPLM.UIL.Common.SortableListView();
+            this.pnlTsSch = new System.Windows.Forms.Panel();
+            this.btnUpdateBpm = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnTsSchDocId = new System.Windows.Forms.Button();
+            this.btnTsClear = new System.Windows.Forms.Button();
+            this.btnTsQiuckSch = new System.Windows.Forms.Button();
+            this.lbTsId = new System.Windows.Forms.Label();
+            this.txtTsID = new System.Windows.Forms.TextBox();
+            this.cMenuTSD = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.D_OPEN_TSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.D_DEL_TSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.D_ADD_TSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.D_TOPRINT_TSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.D_TOSENT_TSD = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemTSDOutput = new System.Windows.Forms.ToolStripMenuItem();
             this.tbCtrlTS.SuspendLayout();
             this.tPTsdLst.SuspendLayout();
             this.pnlTsSch.SuspendLayout();
             this.cMenuTSD.SuspendLayout();
-            base.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tbCtrlTS
+            // 
             this.tbCtrlTS.Controls.Add(this.tPTsdLst);
-            this.tbCtrlTS.Dock = DockStyle.Fill;
-            this.tbCtrlTS.Location = new Point(0, 0);
+            this.tbCtrlTS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbCtrlTS.Location = new System.Drawing.Point(0, 0);
             this.tbCtrlTS.Name = "tbCtrlTS";
             this.tbCtrlTS.SelectedIndex = 0;
-            this.tbCtrlTS.Size = new Size(0x2ff, 0x1b1);
+            this.tbCtrlTS.Size = new System.Drawing.Size(767, 433);
             this.tbCtrlTS.TabIndex = 0;
+            // 
+            // tPTsdLst
+            // 
             this.tPTsdLst.Controls.Add(this.lvwTSD);
             this.tPTsdLst.Controls.Add(this.pnlTsSch);
-            this.tPTsdLst.Location = new Point(4, 0x16);
+            this.tPTsdLst.Location = new System.Drawing.Point(4, 22);
             this.tPTsdLst.Name = "tPTsdLst";
-            this.tPTsdLst.Padding = new Padding(3);
-            this.tPTsdLst.Size = new Size(0x2f7, 0x197);
+            this.tPTsdLst.Padding = new System.Windows.Forms.Padding(3);
+            this.tPTsdLst.Size = new System.Drawing.Size(759, 407);
             this.tPTsdLst.TabIndex = 0;
             this.tPTsdLst.Text = "托晒单列表";
             this.tPTsdLst.UseVisualStyleBackColor = true;
+            // 
+            // lvwTSD
+            // 
             this.lvwTSD.AllowDrop = true;
-            this.lvwTSD.Dock = DockStyle.Fill;
+            this.lvwTSD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwTSD.FullRowSelect = true;
             this.lvwTSD.HideSelection = false;
-            this.lvwTSD.Location = new Point(3, 0x2e);
+            this.lvwTSD.Location = new System.Drawing.Point(3, 46);
             this.lvwTSD.Name = "lvwTSD";
-            this.lvwTSD.Size = new Size(0x2f1, 0x166);
-            this.lvwTSD.SortingOrder = SortOrder.None;
+            this.lvwTSD.Size = new System.Drawing.Size(753, 358);
+            this.lvwTSD.SortingOrder = System.Windows.Forms.SortOrder.None;
             this.lvwTSD.TabIndex = 1;
             this.lvwTSD.UseCompatibleStateImageBehavior = false;
-            this.lvwTSD.View = View.Details;
-            this.lvwTSD.DragDrop += new DragEventHandler(this.lvwTSD_DragDrop);
-            this.lvwTSD.DragEnter += new DragEventHandler(this.lvwTSD_DragEnter);
-            this.lvwTSD.DoubleClick += new EventHandler(this.lvwTSD_DoubleClick);
-            this.lvwTSD.MouseUp += new MouseEventHandler(this.lvwTSD_MouseUp);
-            this.pnlTsSch.BackColor = Color.WhiteSmoke;
+            this.lvwTSD.View = System.Windows.Forms.View.Details;
+            this.lvwTSD.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvwTSD_DragDrop);
+            this.lvwTSD.DragEnter += new System.Windows.Forms.DragEventHandler(this.lvwTSD_DragEnter);
+            this.lvwTSD.DoubleClick += new System.EventHandler(this.lvwTSD_DoubleClick);
+            this.lvwTSD.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvwTSD_MouseUp);
+            // 
+            // pnlTsSch
+            // 
+            this.pnlTsSch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlTsSch.Controls.Add(this.btnUpdateBpm);
             this.pnlTsSch.Controls.Add(this.panel1);
             this.pnlTsSch.Controls.Add(this.label1);
@@ -518,101 +532,161 @@
             this.pnlTsSch.Controls.Add(this.btnTsQiuckSch);
             this.pnlTsSch.Controls.Add(this.lbTsId);
             this.pnlTsSch.Controls.Add(this.txtTsID);
-            this.pnlTsSch.Dock = DockStyle.Top;
-            this.pnlTsSch.Location = new Point(3, 3);
+            this.pnlTsSch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTsSch.Location = new System.Drawing.Point(3, 3);
             this.pnlTsSch.Name = "pnlTsSch";
-            this.pnlTsSch.Size = new Size(0x2f1, 0x2b);
+            this.pnlTsSch.Size = new System.Drawing.Size(753, 43);
             this.pnlTsSch.TabIndex = 0;
+            // 
+            // btnUpdateBpm
+            // 
+            this.btnUpdateBpm.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnUpdateBpm.Location = new System.Drawing.Point(455, 10);
+            this.btnUpdateBpm.Name = "btnUpdateBpm";
+            this.btnUpdateBpm.Size = new System.Drawing.Size(63, 23);
+            this.btnUpdateBpm.TabIndex = 34;
+            this.btnUpdateBpm.Text = "更新流程";
+            this.btnUpdateBpm.UseVisualStyleBackColor = true;
+            this.btnUpdateBpm.Click += new System.EventHandler(this.btnUpdateBpm_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Location = new System.Drawing.Point(264, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(176, 32);
+            this.panel1.TabIndex = 33;
+            // 
+            // label1
+            // 
             this.label1.AutoSize = true;
-            this.label1.Location = new Point(0xcd, 15);
+            this.label1.Location = new System.Drawing.Point(205, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new Size(0x35, 12);
-            this.label1.TabIndex = 0x20;
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 32;
             this.label1.Text = "流程名称";
-            this.btnTsSchDocId.Anchor = AnchorStyles.Right;
-            this.btnTsSchDocId.Font = new Font("宋体", 9f, FontStyle.Bold, GraphicsUnit.Point, 0x86);
-            this.btnTsSchDocId.Location = new Point(0x20c, 9);
+            // 
+            // btnTsSchDocId
+            // 
+            this.btnTsSchDocId.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnTsSchDocId.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTsSchDocId.Location = new System.Drawing.Point(524, 9);
             this.btnTsSchDocId.Name = "btnTsSchDocId";
-            this.btnTsSchDocId.Size = new Size(0x23, 0x17);
-            this.btnTsSchDocId.TabIndex = 0x1f;
+            this.btnTsSchDocId.Size = new System.Drawing.Size(35, 23);
+            this.btnTsSchDocId.TabIndex = 31;
             this.btnTsSchDocId.Text = "...";
             this.btnTsSchDocId.UseVisualStyleBackColor = true;
-            this.btnTsSchDocId.Click += new EventHandler(this.btnTsSchDocId_Click);
-            this.btnTsClear.Anchor = AnchorStyles.Right;
-            this.btnTsClear.Location = new Point(660, 9);
+            this.btnTsSchDocId.Click += new System.EventHandler(this.btnTsSchDocId_Click);
+            // 
+            // btnTsClear
+            // 
+            this.btnTsClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnTsClear.Location = new System.Drawing.Point(660, 9);
             this.btnTsClear.Name = "btnTsClear";
-            this.btnTsClear.Size = new Size(0x4b, 0x17);
+            this.btnTsClear.Size = new System.Drawing.Size(75, 23);
             this.btnTsClear.TabIndex = 30;
             this.btnTsClear.Text = "清空";
             this.btnTsClear.UseVisualStyleBackColor = true;
-            this.btnTsClear.Click += new EventHandler(this.btnTsClear_Click);
-            this.btnTsQiuckSch.Anchor = AnchorStyles.Right;
-            this.btnTsQiuckSch.Location = new Point(0x240, 8);
+            this.btnTsClear.Click += new System.EventHandler(this.btnTsClear_Click);
+            // 
+            // btnTsQiuckSch
+            // 
+            this.btnTsQiuckSch.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnTsQiuckSch.Location = new System.Drawing.Point(576, 8);
             this.btnTsQiuckSch.Name = "btnTsQiuckSch";
-            this.btnTsQiuckSch.Size = new Size(0x4e, 0x17);
-            this.btnTsQiuckSch.TabIndex = 0x1c;
+            this.btnTsQiuckSch.Size = new System.Drawing.Size(78, 23);
+            this.btnTsQiuckSch.TabIndex = 28;
             this.btnTsQiuckSch.Text = "快速查询";
             this.btnTsQiuckSch.UseVisualStyleBackColor = true;
-            this.btnTsQiuckSch.Click += new EventHandler(this.btnTsQiuckSch_Click);
+            this.btnTsQiuckSch.Click += new System.EventHandler(this.btnTsQiuckSch_Click);
+            // 
+            // lbTsId
+            // 
             this.lbTsId.AutoSize = true;
-            this.lbTsId.Location = new Point(3, 13);
+            this.lbTsId.Location = new System.Drawing.Point(3, 13);
             this.lbTsId.Name = "lbTsId";
-            this.lbTsId.Size = new Size(0x1d, 12);
-            this.lbTsId.TabIndex = 0x18;
+            this.lbTsId.Size = new System.Drawing.Size(29, 12);
+            this.lbTsId.TabIndex = 24;
             this.lbTsId.Text = "图号";
-            this.txtTsID.Location = new Point(0x26, 10);
+            // 
+            // txtTsID
+            // 
+            this.txtTsID.Location = new System.Drawing.Point(38, 10);
             this.txtTsID.Name = "txtTsID";
-            this.txtTsID.Size = new Size(0xa1, 0x15);
-            this.txtTsID.TabIndex = 0x17;
-            this.cMenuTSD.Items.AddRange(new ToolStripItem[] { this.D_OPEN_TSD, this.D_DEL_TSD, this.D_ADD_TSD, this.D_TOPRINT_TSD, this.D_TOSENT_TSD });
+            this.txtTsID.Size = new System.Drawing.Size(161, 21);
+            this.txtTsID.TabIndex = 23;
+            // 
+            // cMenuTSD
+            // 
+            this.cMenuTSD.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.D_OPEN_TSD,
+            this.ToolStripMenuItemTSDOutput,
+            this.D_DEL_TSD,
+            this.D_ADD_TSD,
+            this.D_TOPRINT_TSD,
+            this.D_TOSENT_TSD});
             this.cMenuTSD.Name = "cMenuTSD";
-            this.cMenuTSD.Size = new Size(0x89, 0x72);
+            this.cMenuTSD.Size = new System.Drawing.Size(153, 158);
+            // 
+            // D_OPEN_TSD
+            // 
             this.D_OPEN_TSD.Name = "D_OPEN_TSD";
-            this.D_OPEN_TSD.Size = new Size(0x88, 0x16);
+            this.D_OPEN_TSD.Size = new System.Drawing.Size(152, 22);
             this.D_OPEN_TSD.Text = "打开托晒单";
-            this.D_OPEN_TSD.Click += new EventHandler(this.D_OPEN_TSD_Click);
+            this.D_OPEN_TSD.Click += new System.EventHandler(this.D_OPEN_TSD_Click);
+            // 
+            // D_DEL_TSD
+            // 
             this.D_DEL_TSD.Name = "D_DEL_TSD";
-            this.D_DEL_TSD.Size = new Size(0x88, 0x16);
+            this.D_DEL_TSD.Size = new System.Drawing.Size(152, 22);
             this.D_DEL_TSD.Text = "删除托晒单";
-            this.D_DEL_TSD.Click += new EventHandler(this.D_DEL_TSD_Click);
+            this.D_DEL_TSD.Click += new System.EventHandler(this.D_DEL_TSD_Click);
+            // 
+            // D_ADD_TSD
+            // 
             this.D_ADD_TSD.Name = "D_ADD_TSD";
-            this.D_ADD_TSD.Size = new Size(0x88, 0x16);
+            this.D_ADD_TSD.Size = new System.Drawing.Size(152, 22);
             this.D_ADD_TSD.Text = "新增托晒单";
-            this.D_ADD_TSD.Click += new EventHandler(this.D_ADD_TSD_Click);
+            this.D_ADD_TSD.Click += new System.EventHandler(this.D_ADD_TSD_Click);
+            // 
+            // D_TOPRINT_TSD
+            // 
             this.D_TOPRINT_TSD.Name = "D_TOPRINT_TSD";
-            this.D_TOPRINT_TSD.Size = new Size(0x88, 0x16);
+            this.D_TOPRINT_TSD.Size = new System.Drawing.Size(152, 22);
             this.D_TOPRINT_TSD.Text = "发 送 打 印";
             this.D_TOPRINT_TSD.ToolTipText = "定版托晒单";
-            this.D_TOPRINT_TSD.Click += new EventHandler(this.D_TOPRINT_TSD_Click);
+            this.D_TOPRINT_TSD.Click += new System.EventHandler(this.D_TOPRINT_TSD_Click);
+            // 
+            // D_TOSENT_TSD
+            // 
             this.D_TOSENT_TSD.Name = "D_TOSENT_TSD";
-            this.D_TOSENT_TSD.Size = new Size(0x88, 0x16);
+            this.D_TOSENT_TSD.Size = new System.Drawing.Size(152, 22);
             this.D_TOSENT_TSD.Text = "直 接 回 收";
-            this.D_TOSENT_TSD.Click += new EventHandler(this.D_TOSENT_TSD_Click);
-            this.panel1.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
-            this.panel1.Location = new Point(0x108, 8);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new Size(0xb0, 0x20);
-            this.panel1.TabIndex = 0x21;
-            this.btnUpdateBpm.Anchor = AnchorStyles.Right;
-            this.btnUpdateBpm.Location = new Point(0x1c7, 10);
-            this.btnUpdateBpm.Name = "btnUpdateBpm";
-            this.btnUpdateBpm.Size = new Size(0x3f, 0x17);
-            this.btnUpdateBpm.TabIndex = 0x22;
-            this.btnUpdateBpm.Text = "更新流程";
-            this.btnUpdateBpm.UseVisualStyleBackColor = true;
-            this.btnUpdateBpm.Click += new EventHandler(this.btnUpdateBpm_Click);
-            base.AutoScaleDimensions = new SizeF(6f, 12f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            base.Controls.Add(this.tbCtrlTS);
-            base.Name = "UcTs";
-            base.Size = new Size(0x2ff, 0x1b1);
-            base.Load += new EventHandler(this.UcTs_Load);
+            this.D_TOSENT_TSD.Click += new System.EventHandler(this.D_TOSENT_TSD_Click);
+            // 
+            // ToolStripMenuItemTSDOutput
+            // 
+            this.ToolStripMenuItemTSDOutput.Name = "ToolStripMenuItemTSDOutput";
+            this.ToolStripMenuItemTSDOutput.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemTSDOutput.Text = "输出托晒单";
+            this.ToolStripMenuItemTSDOutput.Click += new System.EventHandler(this.TSDOutputToolStripMenuItem_Click);
+            // 
+            // UcTs
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tbCtrlTS);
+            this.Name = "UcTs";
+            this.Size = new System.Drawing.Size(767, 433);
+            this.Load += new System.EventHandler(this.UcTs_Load);
             this.tbCtrlTS.ResumeLayout(false);
             this.tPTsdLst.ResumeLayout(false);
             this.pnlTsSch.ResumeLayout(false);
             this.pnlTsSch.PerformLayout();
             this.cMenuTSD.ResumeLayout(false);
-            base.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         private void InitTsdlvw()
@@ -634,19 +708,19 @@
             this.d_AfterUndoAbandon = new PLMBizItemDelegate(this.AfterItemUpdated);
             this.Lvw_AfterTabClose = new PLMSimpleDelegate(this.CloseTsdTab);
             this.Lvw_AfterTsdCreate = new PLMSimpleDelegate(this.ItemCreated);
-            BizItemHandlerEvent.Instance.D_AfterReleased = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterReleased, this.d_AfterReleased);
-            BizItemHandlerEvent.Instance.D_AfterRevisionCreated = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterRevisionCreated, this.d_AfterRevisionCreated);
-            BizItemHandlerEvent.Instance.D_AfterUndoNewRevision = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterUndoNewRevision, this.d_AfterUndoNewRevision);
-            BizItemHandlerEvent.Instance.D_AfterCheckIn = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterCheckIn, this.d_AfterCheckIn);
-            BizItemHandlerEvent.Instance.D_AfterCheckOut = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterCheckOut, this.d_AfterCheckOut);
-            BizItemHandlerEvent.Instance.D_AfterUndoCheckOut = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterUndoCheckOut, this.d_AfterUndoCheckOut);
-            BizItemHandlerEvent.Instance.D_AfterIterationUpdated = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterIterationUpdated, this.d_AfterIterationUpdated);
-            BizItemHandlerEvent.Instance.D_AfterMasterUpdated = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterMasterUpdated, this.d_AfterMasterUpdated);
-            BizItemHandlerEvent.Instance.D_AfterDeleted = (PLMDelegate2) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterDeleted, this.d_AfterDeleted);
-            BizItemHandlerEvent.Instance.D_AfterUndoAbandon = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterUndoAbandon, this.d_AfterUndoAbandon);
-            BizItemHandlerEvent.Instance.D_AfterAbandon = (PLMBizItemDelegate) Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterAbandon, this.d_AfterAbandon);
-            DelegatesOfAm.Instance.D_AfterTsdTabClose = (PLMSimpleDelegate) Delegate.Combine(DelegatesOfAm.Instance.D_AfterTsdTabClose, this.Lvw_AfterTabClose);
-            DelegatesOfAm.Instance.D_AfterTsdCreate = (PLMSimpleDelegate) Delegate.Combine(DelegatesOfAm.Instance.D_AfterTsdCreate, this.Lvw_AfterTsdCreate);
+            BizItemHandlerEvent.Instance.D_AfterReleased = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterReleased, this.d_AfterReleased);
+            BizItemHandlerEvent.Instance.D_AfterRevisionCreated = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterRevisionCreated, this.d_AfterRevisionCreated);
+            BizItemHandlerEvent.Instance.D_AfterUndoNewRevision = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterUndoNewRevision, this.d_AfterUndoNewRevision);
+            BizItemHandlerEvent.Instance.D_AfterCheckIn = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterCheckIn, this.d_AfterCheckIn);
+            BizItemHandlerEvent.Instance.D_AfterCheckOut = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterCheckOut, this.d_AfterCheckOut);
+            BizItemHandlerEvent.Instance.D_AfterUndoCheckOut = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterUndoCheckOut, this.d_AfterUndoCheckOut);
+            BizItemHandlerEvent.Instance.D_AfterIterationUpdated = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterIterationUpdated, this.d_AfterIterationUpdated);
+            BizItemHandlerEvent.Instance.D_AfterMasterUpdated = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterMasterUpdated, this.d_AfterMasterUpdated);
+            BizItemHandlerEvent.Instance.D_AfterDeleted = (PLMDelegate2)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterDeleted, this.d_AfterDeleted);
+            BizItemHandlerEvent.Instance.D_AfterUndoAbandon = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterUndoAbandon, this.d_AfterUndoAbandon);
+            BizItemHandlerEvent.Instance.D_AfterAbandon = (PLMBizItemDelegate)Delegate.Combine(BizItemHandlerEvent.Instance.D_AfterAbandon, this.d_AfterAbandon);
+            DelegatesOfAm.Instance.D_AfterTsdTabClose = (PLMSimpleDelegate)Delegate.Combine(DelegatesOfAm.Instance.D_AfterTsdTabClose, this.Lvw_AfterTabClose);
+            DelegatesOfAm.Instance.D_AfterTsdCreate = (PLMSimpleDelegate)Delegate.Combine(DelegatesOfAm.Instance.D_AfterTsdCreate, this.Lvw_AfterTsdCreate);
         }
 
         private void ItemCreated(object obj)
@@ -684,7 +758,7 @@
                 }
                 if (e.Data.GetDataPresent(typeof(CLCopyData)))
                 {
-                    CLCopyData data = (CLCopyData) e.Data.GetData(typeof(CLCopyData));
+                    CLCopyData data = (CLCopyData)e.Data.GetData(typeof(CLCopyData));
                     foreach (object obj2 in data)
                     {
                         item = PlArchivManage.GetItem(obj2);
@@ -726,7 +800,7 @@
         {
             if (e.Data.GetDataPresent(typeof(CLCopyData)))
             {
-                CLCopyData data = (CLCopyData) e.Data.GetData(typeof(CLCopyData));
+                CLCopyData data = (CLCopyData)e.Data.GetData(typeof(CLCopyData));
                 if (((data != null) && (data.Count != 0)) && (((data[0] is DEBusinessItem) || (data[0] is DESmartBizItem)) || (data[0] is DERelationBizItem)))
                 {
                     e.Effect = DragDropEffects.Copy;
@@ -771,6 +845,10 @@
                         this.cMenuTSD.Items.Add(this.D_TOPRINT_TSD);
                         this.cMenuTSD.Items.Add(this.D_TOSENT_TSD);
                     }
+                    if (this.lvwTSD.SelectedItems.Count > 0)
+                    {
+                        this.cMenuTSD.Items.Add(this.ToolStripMenuItemTSDOutput);
+                    }
                 }
                 if (this.cMenuTSD.Items.Count > 0)
                 {
@@ -783,7 +861,8 @@
         {
             if (BizItemHandlerEvent.Instance.D_OpenItem != null)
             {
-                PSEventArgs args = new PSEventArgs {
+                PSEventArgs args = new PSEventArgs
+                {
                     PSOption = ClientData.UserGlobalOption
                 };
                 PLMOperationArgs e = new PLMOperationArgs(FrmLogon.PLMProduct.ToString(), PLMLocation.ItemList.ToString(), it);
@@ -808,7 +887,8 @@
                 if (page == null)
                 {
                     UcTsdItem item2;
-                    page = new TabPage(text) {
+                    page = new TabPage(text)
+                    {
                         Name = text
                     };
                     if (item != null)
@@ -840,6 +920,17 @@
             if (item != null)
             {
                 PlArchivManage.UpdateLvwValues(this.hsCols, this.lvwTSD, this.lstOrder, item);
+            }
+        }
+
+        private void TSDOutputToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TsdOutPut put = new TsdOutPut();
+            foreach (ListViewItem item in this.lvwTSD.SelectedItems)
+            {
+                DEBusinessItem tag = item.Tag as DEBusinessItem;
+                string wk = (tag.Iteration.GetAttrValue("WKFLINFO") == null) ? "" : tag.Iteration.GetAttrValue("WKFLINFO").ToString();
+                put.StartOutPut(tag.IterOid, tag, wk);
             }
         }
     }
