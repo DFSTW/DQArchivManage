@@ -25,6 +25,7 @@
         DataSet GetTsRes();
         Hashtable GetViewOfCol(string v_type, out ArrayList lstOrder, out Hashtable hswide);
         void PrintOrSentTsd(Guid useroid, DEBusinessItem item, string action, out StringBuilder strInfo);
+        void SignSentList(ArrayList lisItems, string unit, string signer, string sm);
     }
 }
 

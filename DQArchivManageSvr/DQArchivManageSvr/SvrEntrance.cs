@@ -207,6 +207,12 @@
                 return new WellKnownServiceTypeEntry[] { new WellKnownServiceTypeEntry(typeof(SvrEntrance), "TiPLM/DQArchivManage/SVR/BFEntrance.rem", WellKnownObjectMode.SingleCall) };
             }
         }
+
+
+        public void SignSentList(ArrayList lisItems, string unit, string signer, string sm)
+        {
+            this.brArchiv.SignSentList(lisItems, unit, signer, sm);
+        }
     }
 }
 

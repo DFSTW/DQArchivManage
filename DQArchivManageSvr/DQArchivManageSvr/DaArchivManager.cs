@@ -434,6 +434,31 @@
                 return this._cmd;
             }
         }
+
+        internal void SignSentItem(DEBusinessItem item, string unit, string signer, string sm)
+        {
+            this.cmd.Parameters.Clear();
+            this.cmd.CommandType = CommandType.StoredProcedure;
+            Guid ssoid = Guid.NewGuid();
+            this.cmd.CommandText = "PLM_DQ_DOSSIER.SignSentItem";
+            this.cmd.Parameters.Add(":ioid", OracleDbType.Raw).Value = item.IterOid.ToByteArray();
+            this.cmd.Parameters.Add(":unit", OracleDbType.Varchar2).Value = unit;
+            this.cmd.Parameters.Add(":signer", OracleDbType.Varchar2).Value = signer;
+            this.cmd.Parameters.Add(":sm", OracleDbType.Varchar2).Value = sm;
+            this.cmd.ExecuteNonQuery();
+            
+        }
+
+        internal void SignSentBefore(string unit, string signer)
+        {
+            this.cmd.Parameters.Clear();
+            this.cmd.CommandType = CommandType.StoredProcedure;
+            Guid ssoid = Guid.NewGuid();
+            this.cmd.CommandText = "PLM_DQ_DOSSIER.SignSentBefore";
+            this.cmd.Parameters.Add(":unit", OracleDbType.Varchar2).Value = unit;
+            this.cmd.Parameters.Add(":sign", OracleDbType.Varchar2).Value = signer;
+            this.cmd.ExecuteNonQuery();
+        }
     }
 }
 

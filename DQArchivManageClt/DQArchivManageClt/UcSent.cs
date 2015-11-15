@@ -189,6 +189,7 @@
                             tag.Iteration = PLItem.Agent.GetItemIteration(tag.IterOid, tag.ClassName, false, ClientData.LogonUser.Oid);
                         }
                     }
+                    PlArchivManage.Agent.SignSentList(list, text, str2, sm);
                     foreach (DEBusinessItem item2 in list)
                     {
                         StringBuilder strErr = PlArchivManage.CheckSentRight(item2, true);
@@ -894,6 +895,7 @@
                     }
                     else
                     {
+                        PlArchivManage.Agent.SignSentList(list, string.Empty, string.Empty, string.Empty);
                         StringBuilder builder3 = new StringBuilder();
                         for (num = 0; num < list.Count; num++)
                         {
@@ -955,6 +957,7 @@
                             FrmArchivManage.frmMian.DisplayTextInRichtBox(builder3.ToString(), 1, true);
                         }
                     }
+                    
                 }
             }
         }

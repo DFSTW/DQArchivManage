@@ -859,6 +859,31 @@
                 }
             }
         }
+
+        internal void SignSentList(ArrayList lisItems, string unit, string signer, string sm)
+        {
+            Hashtable hashtable;
+            DBParameter dbParameter = DBUtil.GetDbParameter(false);
+            try
+            {
+                dbParameter.Open();
+                var manager = new DaArchivManager(dbParameter);
+                manager.SignSentBefore(unit, signer);
+                foreach (DEBusinessItem item in lisItems)
+                {
+                    manager.SignSentItem(item, unit, signer, sm);
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new PLMException("SignSentList错误", exception);
+            }
+            finally
+            {
+                dbParameter.Close();
+            }
+            return;
+        }
     }
 }
 

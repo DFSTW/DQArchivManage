@@ -1142,7 +1142,8 @@
             else if (this._theItem.State == ItemState.CheckIn)
             {
                 StringBuilder c;
-                if (PlArchivManage.CheckItemCanPrintOrSent(true, this._theItem, out c) && PLGrantPerm.CanDoClassOperation(ClientData.LogonUser.Oid, "DQDOSSIERPRINT", Guid.Empty, "ClaRel_EDIT") == 1)
+                object attrValue = this._theItem.Iteration.GetAttrValue("TSSTATUS");
+                if ((attrValue != null && attrValue.ToString() != "开始打印")&&/*!PlArchivManage.CheckItemCanPrintOrSent(true, this._theItem, out c) &&*/ PLGrantPerm.CanDoClassOperation(ClientData.LogonUser.Oid, "DQDOSSIERPRINT", Guid.Empty, "ClaRel_EDIT") == 1)
                 {
                     this.btnApp.Text = "编  辑";
                     this._bEdit = false;
