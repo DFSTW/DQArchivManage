@@ -459,6 +459,29 @@
             this.cmd.Parameters.Add(":sign", OracleDbType.Varchar2).Value = signer;
             this.cmd.ExecuteNonQuery();
         }
+
+        internal DataSet GetSentLstSuiJi(string docCode, string wkinfo, string tsdId, string tUnit, string tstype, string sentstate, DateTime dFrom, DateTime dTo)
+        {
+            this.cmd.Parameters.Clear();
+            this.cmd.CommandType = CommandType.StoredProcedure;
+            DataSet set = new DataSet();
+            this.cmd.CommandText = "PLM_DQ_DOSSIER.QuickSchSentSuiji";
+            this.cmd.Parameters.Add(":DocCode", OracleDbType.Varchar2).Value = docCode;
+            this.cmd.Parameters.Add(":BpmName", OracleDbType.Varchar2).Value = wkinfo;
+            this.cmd.Parameters.Add(":TsdId", OracleDbType.Varchar2).Value = tsdId;
+            this.cmd.Parameters.Add(":tUnit", OracleDbType.Varchar2).Value = tUnit;
+            this.cmd.Parameters.Add(":TsType", OracleDbType.Varchar2).Value = tstype;
+            this.cmd.Parameters.Add(":sentstate", OracleDbType.Varchar2).Value = sentstate;
+            this.cmd.Parameters.Add(":FromTime", OracleDbType.Date).Value = new DateTime(dFrom.Year, dFrom.Month, dFrom.Day, 0, 0, 0);
+            this.cmd.Parameters.Add(":ToTime", OracleDbType.Date).Value = new DateTime(dTo.Year, dTo.Month, dTo.Day, 0x17, 0x3b, 0x3b);
+            OracleParameter parameter = this.cmd.Parameters.Add(":rs", OracleDbType.RefCursor, ParameterDirection.Output);
+            this.cmd.ExecuteNonQuery();
+            OracleDataReader dataReader = (parameter.Value as OracleRefCursor).GetDataReader();
+            DataTable table = new DataTable("SENT");
+            table.Load(dataReader);
+            set.Tables.Add(table);
+            return set;
+        }
     }
 }
 

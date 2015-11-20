@@ -16,6 +16,8 @@
         DataSet GetDrawingForTsOutPut(Guid iroid);
         DataSet GetSecondDocStandard();
         DataSet GetSentLst(string docCode, string wkinfo, string tsdId, string tUnit, string tstype, string sentstate, DateTime dFrom, DateTime dTo);
+        DataSet GetSentLstSuiJi(string docCode, string wkinfo, string tsdId, string tUnit, string tstype, string sentstate, DateTime dFrom, DateTime dTo);
+        
         DataSet GetSentResultForOutPut(DEBusinessItem item, string username);
         DataSet GetSentResultForOutPut(ArrayList lstUnit, ArrayList lstItems, out Hashtable hsTbIdx, string userName);
         DataSet GetTSD(string docId, string wkName);

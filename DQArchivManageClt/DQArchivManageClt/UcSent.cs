@@ -137,7 +137,16 @@
             else
             {
                 this.lvwSentLst.Items.Clear();
-                DataSet set = PlArchivManage.Agent.GetSentLst(this.txtDocCode.Text, this.txtBpm.Text, this.txtTsdId.Text, this.txtUnit.Text, this.txtTsType.Text, this.txtIsSent.Text, this.dTFromTime.Value, this.dTToTime.Value);
+                DataSet set;
+                if (!this.IsSUIJI)
+                {
+                    set = PlArchivManage.Agent.GetSentLst(this.txtDocCode.Text, this.txtBpm.Text, this.txtTsdId.Text, this.txtUnit.Text, this.txtTsType.Text, this.txtIsSent.Text, this.dTFromTime.Value, this.dTToTime.Value);
+                }
+                else
+                {
+                    set = PlArchivManage.Agent.GetSentLstSuiJi(this.txtDocCode.Text, this.txtBpm.Text, this.txtTsdId.Text, this.txtUnit.Text, this.txtTsType.Text, this.txtIsSent.Text, this.dTFromTime.Value, this.dTToTime.Value);
+                
+                }
                 if (((set != null) && (set.Tables.Count > 0)) && (set.Tables[0].Rows.Count > 0))
                 {
                     PlArchivManage.SetLvwClsValues(this.hsCols, this.lvwSentLst, this.lstOrder, set.Tables[0], "DQDOSSIRSENT");
@@ -1354,6 +1363,8 @@
         private void UcSent_Load(object sender, EventArgs e)
         {
         }
+
+        public bool IsSUIJI { get; set; }
     }
 }
 

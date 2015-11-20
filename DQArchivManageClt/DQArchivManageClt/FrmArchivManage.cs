@@ -101,6 +101,15 @@
             {
                 this.tbCtrlMain.TabPages.Add(this.tPSent);
                 this.ucSent = new UcSent();
+                this.ucSent.IsSUIJI = true;
+                this.ucSent.Dock = DockStyle.Fill;
+                this.tPSent.Controls.Add(this.ucSent);
+            }
+            if (cansent == 2)
+            {
+                this.tbCtrlMain.TabPages.Add(this.tPSent);
+                this.ucSent = new UcSent();
+                this.ucSent.IsSUIJI = true;
                 this.ucSent.Dock = DockStyle.Fill;
                 this.tPSent.Controls.Add(this.ucSent);
             }

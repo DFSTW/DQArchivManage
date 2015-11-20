@@ -43,6 +43,7 @@
             ArrayList list2 = new ArrayList();
             ArrayList list3 = new ArrayList();
             ArrayList list4 = new ArrayList();
+            ArrayList list5 = new ArrayList();
             string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "dq_daconfig.xml");
             if (File.Exists(path))
             {
@@ -63,6 +64,10 @@
                                 else if (element2.Name == "Print")
                                 {
                                     list3.Add(element3.InnerText);
+                                }
+                                else if (element2.Name == "Suiji")
+                                {
+                                    list5.Add(element3.InnerText);
                                 }
                                 else if (element2.Name == "Signer")
                                 {
@@ -97,6 +102,10 @@
                         if (list4.Contains(role.Name))
                         {
                             canSent = 1;
+                        }
+                        if (list5.Contains(role.Name))
+                        {
+                            canSent = 2;
                         }
                     }
                 }
@@ -212,6 +221,12 @@
         public void SignSentList(ArrayList lisItems, string unit, string signer, string sm)
         {
             this.brArchiv.SignSentList(lisItems, unit, signer, sm);
+        }
+
+
+        public DataSet GetSentLstSuiJi(string docCode, string wkinfo, string tsdId, string tUnit, string tstype, string sentstate, DateTime dFrom, DateTime dTo)
+        {
+            return this.brArchiv.GetSentLstSuiJi(docCode, wkinfo, tsdId, tUnit, tstype, sentstate, dFrom, dTo);
         }
     }
 }

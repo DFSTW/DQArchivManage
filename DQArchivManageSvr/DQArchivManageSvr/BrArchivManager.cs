@@ -884,6 +884,26 @@
             }
             return;
         }
+
+        internal DataSet GetSentLstSuiJi(string docCode, string wkinfo, string tsdId, string tUnit, string tstype, string sentstate, DateTime dFrom, DateTime dTo)
+        {
+            DataSet set;
+            DBParameter dbParameter = DBUtil.GetDbParameter(false);
+            try
+            {
+                dbParameter.Open();
+                set = new DaArchivManager(dbParameter).GetSentLstSuiJi(docCode, wkinfo, tsdId, tUnit, tstype, sentstate, dFrom, dTo);
+            }
+            catch (Exception exception)
+            {
+                throw new PLMException("获取收发清单出错", exception);
+            }
+            finally
+            {
+                dbParameter.Close();
+            }
+            return set;
+        }
     }
 }
 
