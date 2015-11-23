@@ -101,7 +101,7 @@
             {
                 this.tbCtrlMain.TabPages.Add(this.tPSent);
                 this.ucSent = new UcSent();
-                this.ucSent.IsSUIJI = true;
+                this.ucSent.IsSUIJI = false;
                 this.ucSent.Dock = DockStyle.Fill;
                 this.tPSent.Controls.Add(this.ucSent);
             }
