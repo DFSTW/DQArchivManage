@@ -1181,7 +1181,7 @@
             {
                 this.RefreshEditBoms();
             }
-            if (this.chkUseHelp.Checked && !string.IsNullOrEmpty(this.txtUnit.Text))
+            if (/*this.chkUseHelp.Checked &&*/ !string.IsNullOrEmpty(this.txtUnit.Text))
             {
                 object attrValue = this._theItem.Iteration.GetAttrValue("YCT");
                 string ftly = "";
