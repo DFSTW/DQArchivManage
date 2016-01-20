@@ -17,7 +17,9 @@
         private RichTextBox txtInfo;
         private UcPrint ucPrint = null;
         private UcSent ucSent = null;
+        private TabPage tbSta;
         private UcTs ucts = null;
+        private UCSta ucsta = null;
 
         public FrmArchivManage()
         {
@@ -113,74 +115,120 @@
                 this.ucSent.Dock = DockStyle.Fill;
                 this.tPSent.Controls.Add(this.ucSent);
             }
+            this.ucsta = new UCSta();
+            this.ucsta.Dock = DockStyle.Fill;
+            this.tbSta.Controls.Add(this.ucsta);
+
             this.tbCtrlMain.TabPages.Add(this.tpInfo);
+            this.tbCtrlMain.TabPages.Add(this.tbSta);
         }
 
         private void InitializeComponent()
         {
-            this.tbCtrlMain = new TabControl();
-            this.tPTs = new TabPage();
-            this.tPPrint = new TabPage();
-            this.tPSent = new TabPage();
-            this.tpInfo = new TabPage();
-            this.txtInfo = new RichTextBox();
+            this.tbCtrlMain = new System.Windows.Forms.TabControl();
+            this.tPTs = new System.Windows.Forms.TabPage();
+            this.tPPrint = new System.Windows.Forms.TabPage();
+            this.tPSent = new System.Windows.Forms.TabPage();
+            this.tpInfo = new System.Windows.Forms.TabPage();
+            this.txtInfo = new System.Windows.Forms.RichTextBox();
+            this.tbSta = new System.Windows.Forms.TabPage();
             this.tbCtrlMain.SuspendLayout();
             this.tpInfo.SuspendLayout();
-            base.SuspendLayout();
-            this.tbCtrlMain.Appearance = TabAppearance.FlatButtons;
+            this.SuspendLayout();
+            // 
+            // tbCtrlMain
+            // 
+            this.tbCtrlMain.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tbCtrlMain.Controls.Add(this.tPTs);
             this.tbCtrlMain.Controls.Add(this.tPPrint);
             this.tbCtrlMain.Controls.Add(this.tPSent);
             this.tbCtrlMain.Controls.Add(this.tpInfo);
-            this.tbCtrlMain.Dock = DockStyle.Fill;
-            this.tbCtrlMain.Location = new Point(0, 0);
+            this.tbCtrlMain.Controls.Add(this.tbSta);
+            this.tbCtrlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbCtrlMain.Location = new System.Drawing.Point(0, 0);
+            this.tbCtrlMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbCtrlMain.Name = "tbCtrlMain";
             this.tbCtrlMain.SelectedIndex = 0;
-            this.tbCtrlMain.Size = new Size(910, 0x1e2);
+            this.tbCtrlMain.Size = new System.Drawing.Size(1213, 602);
             this.tbCtrlMain.TabIndex = 1;
-            this.tPTs.Location = new Point(4, 0x19);
+            // 
+            // tPTs
+            // 
+            this.tPTs.Location = new System.Drawing.Point(4, 28);
+            this.tPTs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tPTs.Name = "tPTs";
-            this.tPTs.Padding = new Padding(3);
-            this.tPTs.Size = new Size(0x386, 0x1c5);
+            this.tPTs.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTs.Size = new System.Drawing.Size(1205, 570);
             this.tPTs.TabIndex = 0;
             this.tPTs.Text = "托晒单管理";
             this.tPTs.UseVisualStyleBackColor = true;
-            this.tPPrint.Location = new Point(4, 0x19);
+            // 
+            // tPPrint
+            // 
+            this.tPPrint.Location = new System.Drawing.Point(4, 28);
+            this.tPPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tPPrint.Name = "tPPrint";
-            this.tPPrint.Padding = new Padding(3);
-            this.tPPrint.Size = new Size(0x386, 0x1c5);
+            this.tPPrint.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPPrint.Size = new System.Drawing.Size(1205, 570);
             this.tPPrint.TabIndex = 1;
             this.tPPrint.Text = "打印管理";
             this.tPPrint.UseVisualStyleBackColor = true;
-            this.tPSent.Location = new Point(4, 0x19);
+            // 
+            // tPSent
+            // 
+            this.tPSent.Location = new System.Drawing.Point(4, 28);
+            this.tPSent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tPSent.Name = "tPSent";
-            this.tPSent.Size = new Size(0x386, 0x1c5);
+            this.tPSent.Size = new System.Drawing.Size(1205, 570);
             this.tPSent.TabIndex = 2;
             this.tPSent.Text = "收发管理";
             this.tPSent.UseVisualStyleBackColor = true;
+            // 
+            // tpInfo
+            // 
             this.tpInfo.Controls.Add(this.txtInfo);
-            this.tpInfo.Location = new Point(4, 0x19);
+            this.tpInfo.Location = new System.Drawing.Point(4, 28);
+            this.tpInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpInfo.Name = "tpInfo";
-            this.tpInfo.Size = new Size(0x386, 0x1c5);
+            this.tpInfo.Size = new System.Drawing.Size(1205, 570);
             this.tpInfo.TabIndex = 3;
             this.tpInfo.Text = "详细信息";
             this.tpInfo.UseVisualStyleBackColor = true;
-            this.txtInfo.Dock = DockStyle.Fill;
-            this.txtInfo.Location = new Point(0, 0);
+            // 
+            // txtInfo
+            // 
+            this.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtInfo.Location = new System.Drawing.Point(0, 0);
+            this.txtInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtInfo.Name = "txtInfo";
-            this.txtInfo.Size = new Size(0x386, 0x1c5);
+            this.txtInfo.Size = new System.Drawing.Size(1205, 570);
             this.txtInfo.TabIndex = 0;
             this.txtInfo.Text = "";
-            base.AutoScaleDimensions = new SizeF(6f, 12f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            base.ClientSize = new Size(910, 0x1e2);
-            base.Controls.Add(this.tbCtrlMain);
-            base.Name = "FrmArchivManage";
+            // 
+            // tbSta
+            // 
+            this.tbSta.Location = new System.Drawing.Point(4, 28);
+            this.tbSta.Name = "tbSta";
+            this.tbSta.Padding = new System.Windows.Forms.Padding(3);
+            this.tbSta.Size = new System.Drawing.Size(1205, 570);
+            this.tbSta.TabIndex = 4;
+            this.tbSta.Text = "统计信息";
+            this.tbSta.UseVisualStyleBackColor = true;
+            // 
+            // FrmArchivManage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1213, 602);
+            this.Controls.Add(this.tbCtrlMain);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FrmArchivManage";
             this.Text = "东汽档案管理系统";
-            base.Load += new EventHandler(this.FrmArchivManage_Load);
+            this.Load += new System.EventHandler(this.FrmArchivManage_Load);
             this.tbCtrlMain.ResumeLayout(false);
             this.tpInfo.ResumeLayout(false);
-            base.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         public void ShowRs()

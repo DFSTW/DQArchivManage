@@ -50,6 +50,10 @@
       <HintPath>..\..\..\PLMUT\ExcelUT\bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="Thyt.TiPLM.Common.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\TiPLM\PLMClient\Thyt.TiPLM.Common.Helper.DLL</HintPath>
+    </Reference>
     <Reference Include="Thyt.TiPLM.Common.Interface" />
     <Reference Include="Infragistics.Win.UltraWinEditors.v3" />
     <Reference Include="Thyt.TiPLM.DEL.Product" />
@@ -73,6 +77,12 @@
     <Reference Include="Thyt.TiPLM.PLL.Admin.BPM" />
     <Reference Include="Thyt.TiPLM.CLT.Admin.BPM" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DQArchivManageClt\UCSta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DQArchivManageClt\UCSta.Designer.cs">
+      <DependentUpon>UCSta.cs</DependentUpon>
+    </Compile>
     <Compile Include="DQArchivManageClt\UcTsdItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,8 +137,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="DQArchivManageClt\FrmArchivManage.resx">
+      <DependentUpon>FrmArchivManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DQArchivManageClt\UcPrint.resx">
       <DependentUpon>UcPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQArchivManageClt\UCSta.resx">
+      <DependentUpon>UCSta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DQArchivManageClt\UcTs.resx">
       <DependentUpon>UcTs.cs</DependentUpon>
