@@ -34,18 +34,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(109, 19);
+            this.dateTimePicker1.Location = new System.Drawing.Point(109, 9);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker1.TabIndex = 0;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(109, 77);
+            this.dateTimePicker2.Location = new System.Drawing.Point(109, 49);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker2.TabIndex = 1;
@@ -53,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 26);
+            this.label2.Location = new System.Drawing.Point(30, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 3;
@@ -62,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 84);
+            this.label3.Location = new System.Drawing.Point(30, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 4;
@@ -70,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(109, 149);
+            this.button1.Location = new System.Drawing.Point(55, 89);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -80,16 +81,27 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(33, 201);
+            this.listView1.Location = new System.Drawing.Point(12, 124);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(329, 266);
+            this.listView1.Size = new System.Drawing.Size(515, 530);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(182, 88);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "分类统计";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UCSta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -97,7 +109,7 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "UCSta";
-            this.Size = new System.Drawing.Size(740, 549);
+            this.Size = new System.Drawing.Size(550, 673);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +123,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button2;
     }
 }
