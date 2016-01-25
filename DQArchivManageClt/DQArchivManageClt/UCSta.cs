@@ -17,7 +17,7 @@ namespace DQArchivManageClt
         {
             InitializeComponent();
             this.dateTimePicker1.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 26).AddMonths(-1);
-            this.dateTimePicker2.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 25);
+            this.dateTimePicker2.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 26);
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
 
@@ -37,8 +37,8 @@ where m.plm_m_lastrevision = m.plm_r_revision
 and u.plm_oid = m.plm_r_creator
 and m.plm_r_lastiteration = t.plm_iteration
 and m.plm_r_oid = t.plm_revisionoid
-and m.plm_r_createtime >= to_date('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
-and m.plm_r_createtime <= to_date('" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
+and t.plm_checkintime >= to_date('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
+and t.plm_checkintime <= to_date('" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
 and t.plm_tsstatus not in('未发打印')
 group by u.plm_name");
             this.listView1.Items.Clear();
@@ -72,8 +72,8 @@ where m.plm_m_lastrevision = m.plm_r_revision
 and u.plm_oid = m.plm_r_creator
 and m.plm_r_lastiteration = t.plm_iteration
 and m.plm_r_oid = t.plm_revisionoid
-and m.plm_r_createtime >= to_date('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
-and m.plm_r_createtime <= to_date('" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
+and t.plm_checkintime >= to_date('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
+and t.plm_checkintime <= to_date('" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
 and t.plm_tsstatus not in('未发打印')) a
 /*order by u.plm_name*/
 group by a.plm_name, a.plm_yct2, a.plm_ftlx2 
