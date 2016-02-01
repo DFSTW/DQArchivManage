@@ -498,42 +498,42 @@
 
         private void InitializeComponent()
         {
-            this.components = new Container();
-            this.tbCtrlTsdBom = new TabControl();
-            this.tPTsInfo = new TabPage();
-            this.splitContainer1 = new SplitContainer();
-            this.groupBox3 = new GroupBox();
-            this.panel1 = new Panel();
-            this.btnAddBPM = new Button();
-            this.btnClose = new Button();
-            this.btnToSent = new Button();
-            this.btnApp = new Button();
-            this.btnToPrint = new Button();
-            this.lvwRleItems = new SortableListView();
-            this.tPTsBomDocId = new TabPage();
-            this.lvwTsdBomEdit = new SortableListView();
-            this.pnlEditTsdBom = new Panel();
-            this.chkUseHelp = new CheckBox();
-            this.chkFilter = new CheckBox();
-            this.groupBox2 = new GroupBox();
-            this.label22 = new Label();
-            this.txtUnit = new ComboBox();
-            this.txtNumFs = new NumericUpDown();
-            this.label23 = new Label();
-            this.groupBox1 = new GroupBox();
-            this.txtNumMtZs = new NumericUpDown();
-            this.label2 = new Label();
-            this.label20 = new Label();
-            this.txtDocCode = new ComboBox();
-            this.btnDelBomItem = new Button();
-            this.btnSaveBomItem = new Button();
-            this.btnAddBomItem = new Button();
-            this.cMenuDelRel = new ContextMenuStrip(this.components);
-            this.D_DEL_TSD_BOM = new ToolStripMenuItem();
-            this.panel2 = new Panel();
+            this.components = new System.ComponentModel.Container();
+            this.tbCtrlTsdBom = new System.Windows.Forms.TabControl();
+            this.tPTsInfo = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddBPM = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnToSent = new System.Windows.Forms.Button();
+            this.btnApp = new System.Windows.Forms.Button();
+            this.btnToPrint = new System.Windows.Forms.Button();
+            this.lvwRleItems = new Thyt.TiPLM.UIL.Common.SortableListView();
+            this.tPTsBomDocId = new System.Windows.Forms.TabPage();
+            this.lvwTsdBomEdit = new Thyt.TiPLM.UIL.Common.SortableListView();
+            this.pnlEditTsdBom = new System.Windows.Forms.Panel();
+            this.chkUseHelp = new System.Windows.Forms.CheckBox();
+            this.chkFilter = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtUnit = new System.Windows.Forms.ComboBox();
+            this.txtNumFs = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNumMtZs = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtDocCode = new System.Windows.Forms.ComboBox();
+            this.btnDelBomItem = new System.Windows.Forms.Button();
+            this.btnSaveBomItem = new System.Windows.Forms.Button();
+            this.btnAddBomItem = new System.Windows.Forms.Button();
+            this.cMenuDelRel = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.D_DEL_TSD_BOM = new System.Windows.Forms.ToolStripMenuItem();
             this.tbCtrlTsdBom.SuspendLayout();
             this.tPTsInfo.SuspendLayout();
-            this.splitContainer1.BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -541,131 +541,204 @@
             this.tPTsBomDocId.SuspendLayout();
             this.pnlEditTsdBom.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.txtNumFs.BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumFs)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.txtNumMtZs.BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumMtZs)).BeginInit();
             this.cMenuDelRel.SuspendLayout();
-            base.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tbCtrlTsdBom
+            // 
             this.tbCtrlTsdBom.Controls.Add(this.tPTsInfo);
             this.tbCtrlTsdBom.Controls.Add(this.tPTsBomDocId);
-            this.tbCtrlTsdBom.Dock = DockStyle.Fill;
-            this.tbCtrlTsdBom.Location = new Point(0, 0);
+            this.tbCtrlTsdBom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbCtrlTsdBom.Location = new System.Drawing.Point(0, 0);
+            this.tbCtrlTsdBom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbCtrlTsdBom.Name = "tbCtrlTsdBom";
             this.tbCtrlTsdBom.SelectedIndex = 0;
-            this.tbCtrlTsdBom.Size = new Size(0x30d, 0x1a9);
+            this.tbCtrlTsdBom.Size = new System.Drawing.Size(1041, 531);
             this.tbCtrlTsdBom.TabIndex = 1;
+            // 
+            // tPTsInfo
+            // 
             this.tPTsInfo.Controls.Add(this.splitContainer1);
-            this.tPTsInfo.Location = new Point(4, 0x16);
+            this.tPTsInfo.Location = new System.Drawing.Point(4, 25);
+            this.tPTsInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tPTsInfo.Name = "tPTsInfo";
-            this.tPTsInfo.Padding = new Padding(3);
-            this.tPTsInfo.Size = new Size(0x305, 0x18f);
+            this.tPTsInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTsInfo.Size = new System.Drawing.Size(1033, 502);
             this.tPTsInfo.TabIndex = 0;
             this.tPTsInfo.Text = "托晒单详细信息";
             this.tPTsInfo.UseVisualStyleBackColor = true;
-            this.splitContainer1.Dock = DockStyle.Fill;
-            this.splitContainer1.Location = new Point(3, 3);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = Orientation.Horizontal;
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
             this.splitContainer1.Panel1.Controls.Add(this.groupBox3);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
+            // 
+            // splitContainer1.Panel2
+            // 
             this.splitContainer1.Panel2.Controls.Add(this.lvwRleItems);
-            this.splitContainer1.Size = new Size(0x2ff, 0x189);
-            this.splitContainer1.SplitterDistance = 0x11e;
+            this.splitContainer1.Size = new System.Drawing.Size(1025, 494);
+            this.splitContainer1.SplitterDistance = 359;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
-            this.groupBox3.BackColor = Color.WhiteSmoke;
-            this.groupBox3.Dock = DockStyle.Fill;
-            this.groupBox3.Location = new Point(0, 0x2e);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(0, 58);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new Size(0x2ff, 240);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(1025, 301);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
-            this.panel1.BackColor = Color.WhiteSmoke;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAddBPM);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnToSent);
             this.panel1.Controls.Add(this.btnApp);
             this.panel1.Controls.Add(this.btnToPrint);
-            this.panel1.Dock = DockStyle.Top;
-            this.panel1.Location = new Point(0, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new Size(0x2ff, 0x2e);
+            this.panel1.Size = new System.Drawing.Size(1025, 58);
             this.panel1.TabIndex = 0;
-            this.btnAddBPM.Anchor = AnchorStyles.Right;
-            this.btnAddBPM.Location = new Point(290, 11);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Location = new System.Drawing.Point(17, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(363, 40);
+            this.panel2.TabIndex = 34;
+            // 
+            // btnAddBPM
+            // 
+            this.btnAddBPM.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddBPM.Location = new System.Drawing.Point(389, 14);
+            this.btnAddBPM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddBPM.Name = "btnAddBPM";
-            this.btnAddBPM.Size = new Size(0x4b, 0x17);
-            this.btnAddBPM.TabIndex = 0x20;
+            this.btnAddBPM.Size = new System.Drawing.Size(100, 29);
+            this.btnAddBPM.TabIndex = 32;
             this.btnAddBPM.Text = "添加流程";
             this.btnAddBPM.UseVisualStyleBackColor = true;
-            this.btnAddBPM.Click += new EventHandler(this.btnAddBPM_Click);
-            this.btnClose.Anchor = AnchorStyles.Right;
-            this.btnClose.Location = new Point(0x2ab, 10);
+            this.btnAddBPM.Click += new System.EventHandler(this.btnAddBPM_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnClose.Location = new System.Drawing.Point(913, 12);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new Size(0x4b, 0x17);
-            this.btnClose.TabIndex = 0x1d;
+            this.btnClose.Size = new System.Drawing.Size(100, 29);
+            this.btnClose.TabIndex = 29;
             this.btnClose.Text = "关  闭";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new EventHandler(this.btnClose_Click);
-            this.btnToSent.Anchor = AnchorStyles.Right;
-            this.btnToSent.Location = new Point(440, 10);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnToSent
+            // 
+            this.btnToSent.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnToSent.Location = new System.Drawing.Point(589, 12);
+            this.btnToSent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnToSent.Name = "btnToSent";
-            this.btnToSent.Size = new Size(0x4b, 0x17);
+            this.btnToSent.Size = new System.Drawing.Size(100, 29);
             this.btnToSent.TabIndex = 30;
             this.btnToSent.Text = "回  收";
             this.btnToSent.UseVisualStyleBackColor = true;
-            this.btnToSent.Click += new EventHandler(this.btnToSent_Click);
-            this.btnApp.Anchor = AnchorStyles.Right;
-            this.btnApp.Location = new Point(0x25a, 10);
+            this.btnToSent.Click += new System.EventHandler(this.btnToSent_Click);
+            // 
+            // btnApp
+            // 
+            this.btnApp.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnApp.Location = new System.Drawing.Point(805, 12);
+            this.btnApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApp.Name = "btnApp";
-            this.btnApp.Size = new Size(0x4b, 0x17);
-            this.btnApp.TabIndex = 0x1c;
+            this.btnApp.Size = new System.Drawing.Size(100, 29);
+            this.btnApp.TabIndex = 28;
             this.btnApp.Text = "应  用";
             this.btnApp.UseVisualStyleBackColor = true;
-            this.btnApp.Click += new EventHandler(this.btnApp_Click);
-            this.btnToPrint.Anchor = AnchorStyles.Right;
-            this.btnToPrint.Location = new Point(0x209, 10);
+            this.btnApp.Click += new System.EventHandler(this.btnApp_Click);
+            // 
+            // btnToPrint
+            // 
+            this.btnToPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnToPrint.Location = new System.Drawing.Point(697, 12);
+            this.btnToPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnToPrint.Name = "btnToPrint";
-            this.btnToPrint.Size = new Size(0x4b, 0x17);
-            this.btnToPrint.TabIndex = 0x1b;
+            this.btnToPrint.Size = new System.Drawing.Size(100, 29);
+            this.btnToPrint.TabIndex = 27;
             this.btnToPrint.Text = "发送打印";
             this.btnToPrint.UseVisualStyleBackColor = true;
-            this.btnToPrint.Click += new EventHandler(this.btnToPrint_Click);
+            this.btnToPrint.Click += new System.EventHandler(this.btnToPrint_Click);
+            // 
+            // lvwRleItems
+            // 
             this.lvwRleItems.AllowDrop = true;
-            this.lvwRleItems.Dock = DockStyle.Fill;
+            this.lvwRleItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwRleItems.FullRowSelect = true;
             this.lvwRleItems.HideSelection = false;
-            this.lvwRleItems.Location = new Point(0, 0);
+            this.lvwRleItems.Location = new System.Drawing.Point(0, 0);
+            this.lvwRleItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvwRleItems.Name = "lvwRleItems";
-            this.lvwRleItems.Size = new Size(0x2ff, 0x67);
-            this.lvwRleItems.SortingOrder = SortOrder.None;
+            this.lvwRleItems.Size = new System.Drawing.Size(1025, 130);
+            this.lvwRleItems.SortingOrder = System.Windows.Forms.SortOrder.None;
             this.lvwRleItems.TabIndex = 0;
             this.lvwRleItems.UseCompatibleStateImageBehavior = false;
-            this.lvwRleItems.View = View.Details;
-            this.lvwRleItems.DragDrop += new DragEventHandler(this.lvwRleItems_DragDrop);
-            this.lvwRleItems.DragEnter += new DragEventHandler(this.lvwRleItems_DragEnter);
-            this.lvwRleItems.DoubleClick += new EventHandler(this.lvwRleItems_DoubleClick);
-            this.lvwRleItems.MouseUp += new MouseEventHandler(this.lvwRleItems_MouseUp);
-            this.tPTsBomDocId.BackColor = Color.WhiteSmoke;
+            this.lvwRleItems.View = System.Windows.Forms.View.Details;
+            this.lvwRleItems.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvwRleItems_DragDrop);
+            this.lvwRleItems.DragEnter += new System.Windows.Forms.DragEventHandler(this.lvwRleItems_DragEnter);
+            this.lvwRleItems.DoubleClick += new System.EventHandler(this.lvwRleItems_DoubleClick);
+            this.lvwRleItems.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvwRleItems_MouseUp);
+            // 
+            // tPTsBomDocId
+            // 
+            this.tPTsBomDocId.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tPTsBomDocId.Controls.Add(this.lvwTsdBomEdit);
             this.tPTsBomDocId.Controls.Add(this.pnlEditTsdBom);
-            this.tPTsBomDocId.Location = new Point(4, 0x16);
+            this.tPTsBomDocId.Location = new System.Drawing.Point(4, 25);
+            this.tPTsBomDocId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tPTsBomDocId.Name = "tPTsBomDocId";
-            this.tPTsBomDocId.Padding = new Padding(3);
-            this.tPTsBomDocId.Size = new Size(0x305, 0x18f);
+            this.tPTsBomDocId.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTsBomDocId.Size = new System.Drawing.Size(1033, 502);
             this.tPTsBomDocId.TabIndex = 1;
             this.tPTsBomDocId.Text = "图号托晒明细";
-            this.lvwTsdBomEdit.Dock = DockStyle.Fill;
+            // 
+            // lvwTsdBomEdit
+            // 
+            this.lvwTsdBomEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwTsdBomEdit.FullRowSelect = true;
             this.lvwTsdBomEdit.HideSelection = false;
-            this.lvwTsdBomEdit.Location = new Point(3, 3);
+            this.lvwTsdBomEdit.Location = new System.Drawing.Point(4, 4);
+            this.lvwTsdBomEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvwTsdBomEdit.Name = "lvwTsdBomEdit";
-            this.lvwTsdBomEdit.Size = new Size(0x2ff, 0x132);
-            this.lvwTsdBomEdit.SortingOrder = SortOrder.None;
+            this.lvwTsdBomEdit.Size = new System.Drawing.Size(1025, 385);
+            this.lvwTsdBomEdit.SortingOrder = System.Windows.Forms.SortOrder.None;
             this.lvwTsdBomEdit.TabIndex = 4;
             this.lvwTsdBomEdit.UseCompatibleStateImageBehavior = false;
-            this.lvwTsdBomEdit.View = View.Details;
-            this.lvwTsdBomEdit.SelectedIndexChanged += new EventHandler(this.lvwTsdBomEdit_SelectedIndexChanged);
+            this.lvwTsdBomEdit.View = System.Windows.Forms.View.Details;
+            this.lvwTsdBomEdit.SelectedIndexChanged += new System.EventHandler(this.lvwTsdBomEdit_SelectedIndexChanged);
+            // 
+            // pnlEditTsdBom
+            // 
             this.pnlEditTsdBom.Controls.Add(this.chkUseHelp);
             this.pnlEditTsdBom.Controls.Add(this.chkFilter);
             this.pnlEditTsdBom.Controls.Add(this.groupBox2);
@@ -673,151 +746,229 @@
             this.pnlEditTsdBom.Controls.Add(this.btnDelBomItem);
             this.pnlEditTsdBom.Controls.Add(this.btnSaveBomItem);
             this.pnlEditTsdBom.Controls.Add(this.btnAddBomItem);
-            this.pnlEditTsdBom.Dock = DockStyle.Bottom;
-            this.pnlEditTsdBom.Location = new Point(3, 0x135);
+            this.pnlEditTsdBom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlEditTsdBom.Location = new System.Drawing.Point(4, 389);
+            this.pnlEditTsdBom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlEditTsdBom.Name = "pnlEditTsdBom";
-            this.pnlEditTsdBom.Size = new Size(0x2ff, 0x57);
+            this.pnlEditTsdBom.Size = new System.Drawing.Size(1025, 109);
             this.pnlEditTsdBom.TabIndex = 3;
+            // 
+            // chkUseHelp
+            // 
             this.chkUseHelp.AutoSize = true;
-            this.chkUseHelp.Location = new Point(0x1ad, 0x35);
+            this.chkUseHelp.Location = new System.Drawing.Point(572, 66);
+            this.chkUseHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkUseHelp.Name = "chkUseHelp";
-            this.chkUseHelp.Size = new Size(0x54, 0x10);
-            this.chkUseHelp.TabIndex = 0x17;
+            this.chkUseHelp.Size = new System.Drawing.Size(104, 19);
+            this.chkUseHelp.TabIndex = 23;
             this.chkUseHelp.Text = "二次图数量";
             this.chkUseHelp.UseVisualStyleBackColor = true;
+            // 
+            // chkFilter
+            // 
             this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new Point(0x1ad, 0x1a);
+            this.chkFilter.Location = new System.Drawing.Point(572, 32);
+            this.chkFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new Size(0x30, 0x10);
-            this.chkFilter.TabIndex = 0x16;
+            this.chkFilter.Size = new System.Drawing.Size(59, 19);
+            this.chkFilter.TabIndex = 22;
             this.chkFilter.Text = "过滤";
             this.chkFilter.UseVisualStyleBackColor = true;
-            this.chkFilter.CheckedChanged += new EventHandler(this.chkFilter_CheckedChanged);
+            this.chkFilter.CheckedChanged += new System.EventHandler(this.chkFilter_CheckedChanged);
+            // 
+            // groupBox2
+            // 
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.txtUnit);
             this.groupBox2.Controls.Add(this.txtNumFs);
             this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Location = new Point(0xe1, 3);
+            this.groupBox2.Location = new System.Drawing.Point(300, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new Size(0xbf, 0x51);
-            this.groupBox2.TabIndex = 0x15;
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(255, 101);
+            this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "按单位编辑";
+            // 
+            // label22
+            // 
             this.label22.AutoSize = true;
-            this.label22.Location = new Point(6, 0x15);
+            this.label22.Location = new System.Drawing.Point(8, 26);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new Size(0x1d, 12);
+            this.label22.Size = new System.Drawing.Size(37, 15);
             this.label22.TabIndex = 4;
             this.label22.Text = "单位";
-            this.txtUnit.DropDownStyle = ComboBoxStyle.DropDownList;
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtUnit.FormattingEnabled = true;
-            this.txtUnit.Location = new Point(0x29, 0x15);
+            this.txtUnit.Location = new System.Drawing.Point(55, 26);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new Size(0x85, 20);
+            this.txtUnit.Size = new System.Drawing.Size(176, 23);
             this.txtUnit.TabIndex = 14;
-            this.txtUnit.SelectedIndexChanged += new EventHandler(this.txtUnit_SelectedIndexChanged);
-            this.txtNumFs.Location = new Point(0x29, 50);
-            int[] bitsTmp = new int[4];
-            bitsTmp[0] = 0x3e8;
-            this.txtNumFs.Maximum = new decimal(bitsTmp);
+            this.txtUnit.SelectedIndexChanged += new System.EventHandler(this.txtUnit_SelectedIndexChanged);
+            // 
+            // txtNumFs
+            // 
+            this.txtNumFs.Location = new System.Drawing.Point(55, 62);
+            this.txtNumFs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumFs.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.txtNumFs.Name = "txtNumFs";
-            this.txtNumFs.Size = new Size(0x85, 0x15);
+            this.txtNumFs.Size = new System.Drawing.Size(177, 25);
             this.txtNumFs.TabIndex = 8;
-            int[] bitsTmp1 = new int[4];
-            bitsTmp1[0] = 1;
-            this.txtNumFs.Value = new decimal(bitsTmp1);
+            this.txtNumFs.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label23
+            // 
             this.label23.AutoSize = true;
-            this.label23.Location = new Point(7, 0x38);
+            this.label23.Location = new System.Drawing.Point(9, 70);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new Size(0x1d, 12);
+            this.label23.Size = new System.Drawing.Size(37, 15);
             this.label23.TabIndex = 6;
             this.label23.Text = "份数";
+            // 
+            // groupBox1
+            // 
             this.groupBox1.Controls.Add(this.txtNumMtZs);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.txtDocCode);
-            this.groupBox1.Dock = DockStyle.Left;
-            this.groupBox1.Location = new Point(0, 0);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new Size(0xdb, 0x57);
-            this.groupBox1.TabIndex = 0x13;
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(292, 109);
+            this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "托晒明细属性";
-            this.txtNumMtZs.Location = new Point(0x3d, 0x34);
-            int[] bitsTmp2 = new int[4];
-            bitsTmp2[0] = 0x3e8;
-            this.txtNumMtZs.Maximum = new decimal(bitsTmp2);
+            // 
+            // txtNumMtZs
+            // 
+            this.txtNumMtZs.Location = new System.Drawing.Point(81, 65);
+            this.txtNumMtZs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumMtZs.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.txtNumMtZs.Name = "txtNumMtZs";
-            this.txtNumMtZs.Size = new Size(0x8e, 0x15);
-            this.txtNumMtZs.TabIndex = 0x15;
-            int[] bitsTmp3 = new int[4];
-            bitsTmp3[0] = 1;
-            this.txtNumMtZs.Value = new decimal(bitsTmp3);
+            this.txtNumMtZs.Size = new System.Drawing.Size(189, 25);
+            this.txtNumMtZs.TabIndex = 21;
+            this.txtNumMtZs.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
             this.label2.AutoSize = true;
-            this.label2.Location = new Point(9, 0x39);
+            this.label2.Location = new System.Drawing.Point(12, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new Size(0x35, 12);
+            this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 20;
             this.label2.Text = "每份张数";
+            // 
+            // label20
+            // 
             this.label20.AutoSize = true;
-            this.label20.Location = new Point(6, 0x18);
+            this.label20.Location = new System.Drawing.Point(8, 30);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new Size(0x1d, 12);
+            this.label20.Size = new System.Drawing.Size(37, 15);
             this.label20.TabIndex = 0;
             this.label20.Text = "图号";
+            // 
+            // txtDocCode
+            // 
             this.txtDocCode.FormattingEnabled = true;
-            this.txtDocCode.Location = new Point(0x3d, 0x18);
+            this.txtDocCode.Location = new System.Drawing.Point(81, 30);
+            this.txtDocCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDocCode.Name = "txtDocCode";
-            this.txtDocCode.Size = new Size(0x8e, 20);
+            this.txtDocCode.Size = new System.Drawing.Size(188, 23);
             this.txtDocCode.TabIndex = 13;
-            this.txtDocCode.SelectedIndexChanged += new EventHandler(this.txtDocCode_SelectedIndexChanged);
-            this.btnDelBomItem.Anchor = AnchorStyles.Right;
-            this.btnDelBomItem.Location = new Point(0x2a7, 0x40);
+            this.txtDocCode.SelectedIndexChanged += new System.EventHandler(this.txtDocCode_SelectedIndexChanged);
+            // 
+            // btnDelBomItem
+            // 
+            this.btnDelBomItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDelBomItem.Location = new System.Drawing.Point(907, 80);
+            this.btnDelBomItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelBomItem.Name = "btnDelBomItem";
-            this.btnDelBomItem.Size = new Size(0x4b, 0x17);
-            this.btnDelBomItem.TabIndex = 0x12;
+            this.btnDelBomItem.Size = new System.Drawing.Size(100, 29);
+            this.btnDelBomItem.TabIndex = 18;
             this.btnDelBomItem.Text = "删除";
             this.btnDelBomItem.UseVisualStyleBackColor = true;
-            this.btnDelBomItem.Click += new EventHandler(this.btnDelBomItem_Click);
-            this.btnSaveBomItem.Anchor = AnchorStyles.Right;
-            this.btnSaveBomItem.Location = new Point(0x2a7, 0x23);
+            this.btnDelBomItem.Click += new System.EventHandler(this.btnDelBomItem_Click);
+            // 
+            // btnSaveBomItem
+            // 
+            this.btnSaveBomItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSaveBomItem.Location = new System.Drawing.Point(907, 44);
+            this.btnSaveBomItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveBomItem.Name = "btnSaveBomItem";
-            this.btnSaveBomItem.Size = new Size(0x4b, 0x17);
-            this.btnSaveBomItem.TabIndex = 0x11;
+            this.btnSaveBomItem.Size = new System.Drawing.Size(100, 29);
+            this.btnSaveBomItem.TabIndex = 17;
             this.btnSaveBomItem.Text = "修改";
             this.btnSaveBomItem.UseVisualStyleBackColor = true;
-            this.btnSaveBomItem.Click += new EventHandler(this.btnSaveBomItem_Click);
-            this.btnAddBomItem.Anchor = AnchorStyles.Right;
-            this.btnAddBomItem.Location = new Point(0x2a7, 6);
+            this.btnSaveBomItem.Click += new System.EventHandler(this.btnSaveBomItem_Click);
+            // 
+            // btnAddBomItem
+            // 
+            this.btnAddBomItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddBomItem.Location = new System.Drawing.Point(907, 8);
+            this.btnAddBomItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddBomItem.Name = "btnAddBomItem";
-            this.btnAddBomItem.Size = new Size(0x4b, 0x17);
-            this.btnAddBomItem.TabIndex = 0x10;
+            this.btnAddBomItem.Size = new System.Drawing.Size(100, 29);
+            this.btnAddBomItem.TabIndex = 16;
             this.btnAddBomItem.Text = "添加";
             this.btnAddBomItem.UseVisualStyleBackColor = true;
-            this.btnAddBomItem.Click += new EventHandler(this.btnAddBomItem_Click);
-            this.cMenuDelRel.Items.AddRange(new ToolStripItem[] { this.D_DEL_TSD_BOM });
+            this.btnAddBomItem.Click += new System.EventHandler(this.btnAddBomItem_Click);
+            // 
+            // cMenuDelRel
+            // 
+            this.cMenuDelRel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.D_DEL_TSD_BOM});
             this.cMenuDelRel.Name = "cMenuDelRel";
-            this.cMenuDelRel.Size = new Size(0x7d, 0x1a);
+            this.cMenuDelRel.Size = new System.Drawing.Size(153, 50);
+            this.cMenuDelRel.Opening += new System.ComponentModel.CancelEventHandler(this.cMenuDelRel_Opening);
+            // 
+            // D_DEL_TSD_BOM
+            // 
             this.D_DEL_TSD_BOM.Name = "D_DEL_TSD_BOM";
-            this.D_DEL_TSD_BOM.Size = new Size(0x7c, 0x16);
+            this.D_DEL_TSD_BOM.Size = new System.Drawing.Size(152, 24);
             this.D_DEL_TSD_BOM.Text = "移除文档";
-            this.D_DEL_TSD_BOM.Click += new EventHandler(this.D_DEL_TSD_BOM_Click);
-            this.panel2.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
-            this.panel2.Location = new Point(13, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new Size(0x10f, 0x20);
-            this.panel2.TabIndex = 0x22;
-            base.AutoScaleDimensions = new SizeF(6f, 12f);
-            base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            base.Controls.Add(this.tbCtrlTsdBom);
-            base.Name = "UcTsdItem";
-            base.Size = new Size(0x30d, 0x1a9);
-            base.Load += new EventHandler(this.UcTsdItem_Load);
+            this.D_DEL_TSD_BOM.Click += new System.EventHandler(this.D_DEL_TSD_BOM_Click);
+            // 
+            // UcTsdItem
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tbCtrlTsdBom);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "UcTsdItem";
+            this.Size = new System.Drawing.Size(1041, 531);
+            this.Load += new System.EventHandler(this.UcTsdItem_Load);
             this.tbCtrlTsdBom.ResumeLayout(false);
             this.tPTsInfo.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tPTsBomDocId.ResumeLayout(false);
@@ -825,12 +976,13 @@
             this.pnlEditTsdBom.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.txtNumFs.EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumFs)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.txtNumMtZs.EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumMtZs)).EndInit();
             this.cMenuDelRel.ResumeLayout(false);
-            base.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         private void InitIvwRelItem()
@@ -1291,6 +1443,11 @@
                 object attrValue = this._theItem.Iteration.GetAttrValue("YCT");
                 return ((attrValue == null) || (attrValue.ToString() == "一次图"));
             }
+        }
+
+        private void cMenuDelRel_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

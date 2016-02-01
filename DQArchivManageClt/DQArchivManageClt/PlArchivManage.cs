@@ -859,7 +859,7 @@
             DEBusinessItem item = PLItem.CreateBizItem(PLItem.Agent.AutoGenerateID(clsName), clsName, 1, "1", ClientData.UserGlobalOption, ClientData.LogonUser.Oid);
             if (clsName == "DQDOSSIERPRINT")
             {
-                item.Iteration.SetAttrValue("YCT", "二次图");
+                item.Iteration.SetAttrValue("YCT", "一次图");
                 item.Iteration.SetAttrValue("TSSTATUS", "未发打印");
                 item.Iteration.SetAttrValue("TSTYPE", "新发");
                 item.Iteration.SetAttrValue("ZS", 0);

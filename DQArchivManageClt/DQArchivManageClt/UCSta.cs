@@ -26,7 +26,9 @@ namespace DQArchivManageClt
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string selector = "and u.plm_logid  = '" + ClientData.LogonUser.LogId + "' ";
+            if (ClientData.LogonUser.LogId == "05700" || ClientData.LogonUser.LogId == "sysadmin" || ClientData.LogonUser.LogId == "01975")
+                selector = string.Empty;
             listView1.Columns.Clear();
             listView1.Columns.Add("姓名", 120, HorizontalAlignment.Left);
             listView1.Columns.Add("托晒单数", 120, HorizontalAlignment.Left);
@@ -39,8 +41,8 @@ and m.plm_r_lastiteration = t.plm_iteration
 and m.plm_r_oid = t.plm_revisionoid
 and t.plm_checkintime >= to_date('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
 and t.plm_checkintime <= to_date('" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
-and t.plm_tsstatus not in('未发打印')
-group by u.plm_name");
+and t.plm_tsstatus not in('未发打印') " + selector +
+"group by u.plm_name");
             this.listView1.Items.Clear();
             foreach (DataRow row in dt.Rows)
             {
@@ -57,6 +59,9 @@ group by u.plm_name");
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string selector = "and u.plm_logid  = '" + ClientData.LogonUser.LogId + "' ";
+            if (ClientData.LogonUser.LogId == "05700" || ClientData.LogonUser.LogId == "sysadmin" || ClientData.LogonUser.LogId == "01975")
+                selector = string.Empty;
             listView1.Columns.Clear();
             listView1.Columns.Add("姓名", 80, HorizontalAlignment.Left);
             listView1.Columns.Add("投图方式", 80, HorizontalAlignment.Left);
@@ -74,7 +79,10 @@ and m.plm_r_lastiteration = t.plm_iteration
 and m.plm_r_oid = t.plm_revisionoid
 and t.plm_checkintime >= to_date('" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
 and t.plm_checkintime <= to_date('" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + @"','yyyy-MM-dd')
-and t.plm_tsstatus not in('未发打印')) a
+and t.plm_tsstatus not in('未发打印')
+" + selector +
+@"
+) a
 /*order by u.plm_name*/
 group by a.plm_name, a.plm_yct2, a.plm_ftlx2 
 order by 姓名,投图方式 desc,发图类型");

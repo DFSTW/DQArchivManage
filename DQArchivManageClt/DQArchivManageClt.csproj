@@ -149,6 +149,9 @@
     <EmbeddedResource Include="DQArchivManageClt\UcTs.resx">
       <DependentUpon>UcTs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DQArchivManageClt\UcTsdItem.resx">
+      <DependentUpon>UcTsdItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
 </Project>
