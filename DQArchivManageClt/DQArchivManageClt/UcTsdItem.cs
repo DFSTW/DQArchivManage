@@ -553,7 +553,7 @@
             this.tbCtrlTsdBom.Controls.Add(this.tPTsBomDocId);
             this.tbCtrlTsdBom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbCtrlTsdBom.Location = new System.Drawing.Point(0, 0);
-            this.tbCtrlTsdBom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCtrlTsdBom.Margin = new System.Windows.Forms.Padding(4);
             this.tbCtrlTsdBom.Name = "tbCtrlTsdBom";
             this.tbCtrlTsdBom.SelectedIndex = 0;
             this.tbCtrlTsdBom.Size = new System.Drawing.Size(1041, 531);
@@ -563,9 +563,9 @@
             // 
             this.tPTsInfo.Controls.Add(this.splitContainer1);
             this.tPTsInfo.Location = new System.Drawing.Point(4, 25);
-            this.tPTsInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTsInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tPTsInfo.Name = "tPTsInfo";
-            this.tPTsInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTsInfo.Padding = new System.Windows.Forms.Padding(4);
             this.tPTsInfo.Size = new System.Drawing.Size(1033, 502);
             this.tPTsInfo.TabIndex = 0;
             this.tPTsInfo.Text = "托晒单详细信息";
@@ -575,7 +575,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(4, 4);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -588,7 +588,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.lvwRleItems);
             this.splitContainer1.Size = new System.Drawing.Size(1025, 494);
-            this.splitContainer1.SplitterDistance = 359;
+            this.splitContainer1.SplitterDistance = 245;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -597,10 +597,10 @@
             this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 58);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1025, 301);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(1025, 187);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
@@ -615,26 +615,24 @@
             this.panel1.Controls.Add(this.btnToPrint);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1025, 58);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Location = new System.Drawing.Point(17, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(363, 40);
+            this.panel2.Size = new System.Drawing.Size(255, 40);
             this.panel2.TabIndex = 34;
             // 
             // btnAddBPM
             // 
-            this.btnAddBPM.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAddBPM.Location = new System.Drawing.Point(389, 14);
-            this.btnAddBPM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddBPM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddBPM.Location = new System.Drawing.Point(280, 12);
+            this.btnAddBPM.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddBPM.Name = "btnAddBPM";
             this.btnAddBPM.Size = new System.Drawing.Size(100, 29);
             this.btnAddBPM.TabIndex = 32;
@@ -644,9 +642,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnClose.Location = new System.Drawing.Point(913, 12);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.Location = new System.Drawing.Point(782, 12);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 29);
             this.btnClose.TabIndex = 29;
@@ -656,9 +654,9 @@
             // 
             // btnToSent
             // 
-            this.btnToSent.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnToSent.Location = new System.Drawing.Point(589, 12);
-            this.btnToSent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnToSent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnToSent.Location = new System.Drawing.Point(401, 12);
+            this.btnToSent.Margin = new System.Windows.Forms.Padding(4);
             this.btnToSent.Name = "btnToSent";
             this.btnToSent.Size = new System.Drawing.Size(100, 29);
             this.btnToSent.TabIndex = 30;
@@ -668,9 +666,9 @@
             // 
             // btnApp
             // 
-            this.btnApp.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnApp.Location = new System.Drawing.Point(805, 12);
-            this.btnApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnApp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnApp.Location = new System.Drawing.Point(658, 12);
+            this.btnApp.Margin = new System.Windows.Forms.Padding(4);
             this.btnApp.Name = "btnApp";
             this.btnApp.Size = new System.Drawing.Size(100, 29);
             this.btnApp.TabIndex = 28;
@@ -680,9 +678,9 @@
             // 
             // btnToPrint
             // 
-            this.btnToPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnToPrint.Location = new System.Drawing.Point(697, 12);
-            this.btnToPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnToPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnToPrint.Location = new System.Drawing.Point(529, 12);
+            this.btnToPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnToPrint.Name = "btnToPrint";
             this.btnToPrint.Size = new System.Drawing.Size(100, 29);
             this.btnToPrint.TabIndex = 27;
@@ -697,9 +695,9 @@
             this.lvwRleItems.FullRowSelect = true;
             this.lvwRleItems.HideSelection = false;
             this.lvwRleItems.Location = new System.Drawing.Point(0, 0);
-            this.lvwRleItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvwRleItems.Margin = new System.Windows.Forms.Padding(4);
             this.lvwRleItems.Name = "lvwRleItems";
-            this.lvwRleItems.Size = new System.Drawing.Size(1025, 130);
+            this.lvwRleItems.Size = new System.Drawing.Size(1025, 244);
             this.lvwRleItems.SortingOrder = System.Windows.Forms.SortOrder.None;
             this.lvwRleItems.TabIndex = 0;
             this.lvwRleItems.UseCompatibleStateImageBehavior = false;
@@ -715,9 +713,9 @@
             this.tPTsBomDocId.Controls.Add(this.lvwTsdBomEdit);
             this.tPTsBomDocId.Controls.Add(this.pnlEditTsdBom);
             this.tPTsBomDocId.Location = new System.Drawing.Point(4, 25);
-            this.tPTsBomDocId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTsBomDocId.Margin = new System.Windows.Forms.Padding(4);
             this.tPTsBomDocId.Name = "tPTsBomDocId";
-            this.tPTsBomDocId.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tPTsBomDocId.Padding = new System.Windows.Forms.Padding(4);
             this.tPTsBomDocId.Size = new System.Drawing.Size(1033, 502);
             this.tPTsBomDocId.TabIndex = 1;
             this.tPTsBomDocId.Text = "图号托晒明细";
@@ -728,7 +726,7 @@
             this.lvwTsdBomEdit.FullRowSelect = true;
             this.lvwTsdBomEdit.HideSelection = false;
             this.lvwTsdBomEdit.Location = new System.Drawing.Point(4, 4);
-            this.lvwTsdBomEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvwTsdBomEdit.Margin = new System.Windows.Forms.Padding(4);
             this.lvwTsdBomEdit.Name = "lvwTsdBomEdit";
             this.lvwTsdBomEdit.Size = new System.Drawing.Size(1025, 385);
             this.lvwTsdBomEdit.SortingOrder = System.Windows.Forms.SortOrder.None;
@@ -748,7 +746,7 @@
             this.pnlEditTsdBom.Controls.Add(this.btnAddBomItem);
             this.pnlEditTsdBom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlEditTsdBom.Location = new System.Drawing.Point(4, 389);
-            this.pnlEditTsdBom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEditTsdBom.Margin = new System.Windows.Forms.Padding(4);
             this.pnlEditTsdBom.Name = "pnlEditTsdBom";
             this.pnlEditTsdBom.Size = new System.Drawing.Size(1025, 109);
             this.pnlEditTsdBom.TabIndex = 3;
@@ -757,7 +755,7 @@
             // 
             this.chkUseHelp.AutoSize = true;
             this.chkUseHelp.Location = new System.Drawing.Point(572, 66);
-            this.chkUseHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkUseHelp.Margin = new System.Windows.Forms.Padding(4);
             this.chkUseHelp.Name = "chkUseHelp";
             this.chkUseHelp.Size = new System.Drawing.Size(104, 19);
             this.chkUseHelp.TabIndex = 23;
@@ -768,7 +766,7 @@
             // 
             this.chkFilter.AutoSize = true;
             this.chkFilter.Location = new System.Drawing.Point(572, 32);
-            this.chkFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkFilter.Margin = new System.Windows.Forms.Padding(4);
             this.chkFilter.Name = "chkFilter";
             this.chkFilter.Size = new System.Drawing.Size(59, 19);
             this.chkFilter.TabIndex = 22;
@@ -783,9 +781,9 @@
             this.groupBox2.Controls.Add(this.txtNumFs);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Location = new System.Drawing.Point(300, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(255, 101);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
@@ -806,7 +804,7 @@
             this.txtUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtUnit.FormattingEnabled = true;
             this.txtUnit.Location = new System.Drawing.Point(55, 26);
-            this.txtUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(176, 23);
             this.txtUnit.TabIndex = 14;
@@ -815,7 +813,7 @@
             // txtNumFs
             // 
             this.txtNumFs.Location = new System.Drawing.Point(55, 62);
-            this.txtNumFs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumFs.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumFs.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -848,9 +846,9 @@
             this.groupBox1.Controls.Add(this.txtDocCode);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(292, 109);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
@@ -859,7 +857,7 @@
             // txtNumMtZs
             // 
             this.txtNumMtZs.Location = new System.Drawing.Point(81, 65);
-            this.txtNumMtZs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumMtZs.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumMtZs.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -898,7 +896,7 @@
             // 
             this.txtDocCode.FormattingEnabled = true;
             this.txtDocCode.Location = new System.Drawing.Point(81, 30);
-            this.txtDocCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDocCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtDocCode.Name = "txtDocCode";
             this.txtDocCode.Size = new System.Drawing.Size(188, 23);
             this.txtDocCode.TabIndex = 13;
@@ -908,7 +906,7 @@
             // 
             this.btnDelBomItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDelBomItem.Location = new System.Drawing.Point(907, 80);
-            this.btnDelBomItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelBomItem.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelBomItem.Name = "btnDelBomItem";
             this.btnDelBomItem.Size = new System.Drawing.Size(100, 29);
             this.btnDelBomItem.TabIndex = 18;
@@ -920,7 +918,7 @@
             // 
             this.btnSaveBomItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSaveBomItem.Location = new System.Drawing.Point(907, 44);
-            this.btnSaveBomItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveBomItem.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveBomItem.Name = "btnSaveBomItem";
             this.btnSaveBomItem.Size = new System.Drawing.Size(100, 29);
             this.btnSaveBomItem.TabIndex = 17;
@@ -932,7 +930,7 @@
             // 
             this.btnAddBomItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAddBomItem.Location = new System.Drawing.Point(907, 8);
-            this.btnAddBomItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddBomItem.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddBomItem.Name = "btnAddBomItem";
             this.btnAddBomItem.Size = new System.Drawing.Size(100, 29);
             this.btnAddBomItem.TabIndex = 16;
@@ -945,13 +943,13 @@
             this.cMenuDelRel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.D_DEL_TSD_BOM});
             this.cMenuDelRel.Name = "cMenuDelRel";
-            this.cMenuDelRel.Size = new System.Drawing.Size(153, 50);
+            this.cMenuDelRel.Size = new System.Drawing.Size(139, 28);
             this.cMenuDelRel.Opening += new System.ComponentModel.CancelEventHandler(this.cMenuDelRel_Opening);
             // 
             // D_DEL_TSD_BOM
             // 
             this.D_DEL_TSD_BOM.Name = "D_DEL_TSD_BOM";
-            this.D_DEL_TSD_BOM.Size = new System.Drawing.Size(152, 24);
+            this.D_DEL_TSD_BOM.Size = new System.Drawing.Size(138, 24);
             this.D_DEL_TSD_BOM.Text = "移除文档";
             this.D_DEL_TSD_BOM.Click += new System.EventHandler(this.D_DEL_TSD_BOM_Click);
             // 
@@ -960,7 +958,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tbCtrlTsdBom);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UcTsdItem";
             this.Size = new System.Drawing.Size(1041, 531);
             this.Load += new System.EventHandler(this.UcTsdItem_Load);
