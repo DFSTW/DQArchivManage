@@ -221,19 +221,21 @@
             this.tbCtrlPrint.Controls.Add(this.tpPrintLst);
             this.tbCtrlPrint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbCtrlPrint.Location = new System.Drawing.Point(0, 0);
+            this.tbCtrlPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbCtrlPrint.Name = "tbCtrlPrint";
             this.tbCtrlPrint.SelectedIndex = 0;
-            this.tbCtrlPrint.Size = new System.Drawing.Size(770, 422);
+            this.tbCtrlPrint.Size = new System.Drawing.Size(1027, 528);
             this.tbCtrlPrint.TabIndex = 0;
             // 
             // tpPrintLst
             // 
             this.tpPrintLst.Controls.Add(this.lvwPrintLst);
             this.tpPrintLst.Controls.Add(this.panel1);
-            this.tpPrintLst.Location = new System.Drawing.Point(4, 22);
+            this.tpPrintLst.Location = new System.Drawing.Point(4, 25);
+            this.tpPrintLst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpPrintLst.Name = "tpPrintLst";
-            this.tpPrintLst.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPrintLst.Size = new System.Drawing.Size(762, 396);
+            this.tpPrintLst.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpPrintLst.Size = new System.Drawing.Size(1019, 499);
             this.tpPrintLst.TabIndex = 0;
             this.tpPrintLst.Text = "打印列表";
             this.tpPrintLst.UseVisualStyleBackColor = true;
@@ -243,9 +245,10 @@
             this.lvwPrintLst.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwPrintLst.FullRowSelect = true;
             this.lvwPrintLst.HideSelection = false;
-            this.lvwPrintLst.Location = new System.Drawing.Point(3, 51);
+            this.lvwPrintLst.Location = new System.Drawing.Point(4, 64);
+            this.lvwPrintLst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvwPrintLst.Name = "lvwPrintLst";
-            this.lvwPrintLst.Size = new System.Drawing.Size(756, 342);
+            this.lvwPrintLst.Size = new System.Drawing.Size(1011, 431);
             this.lvwPrintLst.SortingOrder = System.Windows.Forms.SortOrder.None;
             this.lvwPrintLst.TabIndex = 1;
             this.lvwPrintLst.UseCompatibleStateImageBehavior = false;
@@ -265,17 +268,19 @@
             this.panel1.Controls.Add(this.lbTsId);
             this.panel1.Controls.Add(this.txtTsID);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 48);
+            this.panel1.Size = new System.Drawing.Size(1011, 60);
             this.panel1.TabIndex = 0;
             // 
             // btnUpdateBpm
             // 
             this.btnUpdateBpm.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnUpdateBpm.Location = new System.Drawing.Point(466, 10);
+            this.btnUpdateBpm.Location = new System.Drawing.Point(624, 12);
+            this.btnUpdateBpm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateBpm.Name = "btnUpdateBpm";
-            this.btnUpdateBpm.Size = new System.Drawing.Size(63, 23);
+            this.btnUpdateBpm.Size = new System.Drawing.Size(84, 29);
             this.btnUpdateBpm.TabIndex = 42;
             this.btnUpdateBpm.Text = "更新流程";
             this.btnUpdateBpm.UseVisualStyleBackColor = true;
@@ -284,17 +289,19 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Location = new System.Drawing.Point(275, 8);
+            this.panel2.Location = new System.Drawing.Point(367, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(176, 32);
+            this.panel2.Size = new System.Drawing.Size(238, 40);
             this.panel2.TabIndex = 41;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 17);
+            this.label1.Location = new System.Drawing.Point(289, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 40;
             this.label1.Text = "流程名称";
             // 
@@ -302,9 +309,10 @@
             // 
             this.btnTsSchDocId.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnTsSchDocId.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTsSchDocId.Location = new System.Drawing.Point(544, 11);
+            this.btnTsSchDocId.Location = new System.Drawing.Point(728, 14);
+            this.btnTsSchDocId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTsSchDocId.Name = "btnTsSchDocId";
-            this.btnTsSchDocId.Size = new System.Drawing.Size(35, 23);
+            this.btnTsSchDocId.Size = new System.Drawing.Size(47, 29);
             this.btnTsSchDocId.TabIndex = 38;
             this.btnTsSchDocId.Text = "...";
             this.btnTsSchDocId.UseVisualStyleBackColor = true;
@@ -313,9 +321,10 @@
             // btnTsClear
             // 
             this.btnTsClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnTsClear.Location = new System.Drawing.Point(669, 10);
+            this.btnTsClear.Location = new System.Drawing.Point(895, 12);
+            this.btnTsClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTsClear.Name = "btnTsClear";
-            this.btnTsClear.Size = new System.Drawing.Size(75, 23);
+            this.btnTsClear.Size = new System.Drawing.Size(100, 29);
             this.btnTsClear.TabIndex = 37;
             this.btnTsClear.Text = "清空";
             this.btnTsClear.UseVisualStyleBackColor = true;
@@ -324,28 +333,33 @@
             // btnTsQiuckSch
             // 
             this.btnTsQiuckSch.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnTsQiuckSch.Location = new System.Drawing.Point(585, 12);
+            this.btnTsQiuckSch.Enabled = false;
+            this.btnTsQiuckSch.Location = new System.Drawing.Point(783, 15);
+            this.btnTsQiuckSch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTsQiuckSch.Name = "btnTsQiuckSch";
-            this.btnTsQiuckSch.Size = new System.Drawing.Size(78, 23);
+            this.btnTsQiuckSch.Size = new System.Drawing.Size(104, 29);
             this.btnTsQiuckSch.TabIndex = 35;
             this.btnTsQiuckSch.Text = "快速查询";
             this.btnTsQiuckSch.UseVisualStyleBackColor = true;
+            this.btnTsQiuckSch.Visible = false;
             this.btnTsQiuckSch.Click += new System.EventHandler(this.btnTsQiuckSch_Click);
             // 
             // lbTsId
             // 
             this.lbTsId.AutoSize = true;
-            this.lbTsId.Location = new System.Drawing.Point(15, 16);
+            this.lbTsId.Location = new System.Drawing.Point(20, 20);
+            this.lbTsId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTsId.Name = "lbTsId";
-            this.lbTsId.Size = new System.Drawing.Size(29, 12);
+            this.lbTsId.Size = new System.Drawing.Size(37, 15);
             this.lbTsId.TabIndex = 33;
             this.lbTsId.Text = "图号";
             // 
             // txtTsID
             // 
-            this.txtTsID.Location = new System.Drawing.Point(50, 13);
+            this.txtTsID.Location = new System.Drawing.Point(67, 16);
+            this.txtTsID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTsID.Name = "txtTsID";
-            this.txtTsID.Size = new System.Drawing.Size(161, 21);
+            this.txtTsID.Size = new System.Drawing.Size(213, 25);
             this.txtTsID.TabIndex = 32;
             // 
             // cMenuPrint
@@ -359,12 +373,12 @@
             this.mItemBack,
             this.mItemDownRrt});
             this.cMenuPrint.Name = "cMenuPrint";
-            this.cMenuPrint.Size = new System.Drawing.Size(153, 180);
+            this.cMenuPrint.Size = new System.Drawing.Size(169, 172);
             // 
             // mItemOpen
             // 
             this.mItemOpen.Name = "mItemOpen";
-            this.mItemOpen.Size = new System.Drawing.Size(148, 22);
+            this.mItemOpen.Size = new System.Drawing.Size(168, 24);
             this.mItemOpen.Text = "打开托晒单";
             this.mItemOpen.Click += new System.EventHandler(this.mItemOpen_Click);
             // 
@@ -372,7 +386,7 @@
             // 
             this.mItemCancelPrint.Enabled = false;
             this.mItemCancelPrint.Name = "mItemCancelPrint";
-            this.mItemCancelPrint.Size = new System.Drawing.Size(152, 22);
+            this.mItemCancelPrint.Size = new System.Drawing.Size(168, 24);
             this.mItemCancelPrint.Text = "取 消 打 印";
             this.mItemCancelPrint.Visible = false;
             this.mItemCancelPrint.Click += new System.EventHandler(this.mItemCancelPrint_Click);
@@ -380,7 +394,7 @@
             // mItemToSent
             // 
             this.mItemToSent.Name = "mItemToSent";
-            this.mItemToSent.Size = new System.Drawing.Size(148, 22);
+            this.mItemToSent.Size = new System.Drawing.Size(168, 24);
             this.mItemToSent.Text = "打 印 完 成";
             this.mItemToSent.Click += new System.EventHandler(this.mItemToSent_Click);
             // 
@@ -388,7 +402,7 @@
             // 
             this.mItemRePrint.Enabled = false;
             this.mItemRePrint.Name = "mItemRePrint";
-            this.mItemRePrint.Size = new System.Drawing.Size(152, 22);
+            this.mItemRePrint.Size = new System.Drawing.Size(168, 24);
             this.mItemRePrint.Text = "重 新 打 印";
             this.mItemRePrint.Visible = false;
             this.mItemRePrint.Click += new System.EventHandler(this.mItemRePrint_Click);
@@ -396,7 +410,7 @@
             // mItemOutPut
             // 
             this.mItemOutPut.Name = "mItemOutPut";
-            this.mItemOutPut.Size = new System.Drawing.Size(148, 22);
+            this.mItemOutPut.Size = new System.Drawing.Size(168, 24);
             this.mItemOutPut.Text = "输出托晒单";
             this.mItemOutPut.Click += new System.EventHandler(this.mItemOutPut_Click);
             // 
@@ -404,7 +418,7 @@
             // 
             this.mItemBack.Enabled = false;
             this.mItemBack.Name = "mItemBack";
-            this.mItemBack.Size = new System.Drawing.Size(152, 22);
+            this.mItemBack.Size = new System.Drawing.Size(168, 24);
             this.mItemBack.Text = "打 印 回 退";
             this.mItemBack.Visible = false;
             this.mItemBack.Click += new System.EventHandler(this.mItemBack_Click);
@@ -412,17 +426,18 @@
             // mItemDownRrt
             // 
             this.mItemDownRrt.Name = "mItemDownRrt";
-            this.mItemDownRrt.Size = new System.Drawing.Size(148, 22);
+            this.mItemDownRrt.Size = new System.Drawing.Size(168, 24);
             this.mItemDownRrt.Text = "下载打印文件";
             this.mItemDownRrt.Click += new System.EventHandler(this.MItemDownRrt_Click);
             // 
             // UcPrint
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tbCtrlPrint);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UcPrint";
-            this.Size = new System.Drawing.Size(770, 422);
+            this.Size = new System.Drawing.Size(1027, 528);
             this.Load += new System.EventHandler(this.UcPrint_Load);
             this.tbCtrlPrint.ResumeLayout(false);
             this.tpPrintLst.ResumeLayout(false);
