@@ -1716,7 +1716,7 @@
             object attrValue = relitem.Relation.GetAttrValue(ConstAm.SENTBOM_ATTR_FFDW);
             if (attrValue != null)
             {
-                ArrayList list2 = new ArrayList(attrValue.ToString().Split(new char[] { ';' }));
+                ArrayList list2 = new ArrayList(attrValue.ToString().Split(new char[] { ';' },StringSplitOptions.RemoveEmptyEntries));
                 for (int i = 0; i < list2.Count; i++)
                 {
                     if (string.IsNullOrEmpty(unit) || (list2[i].ToString().IndexOf(unit + "(") != -1))
